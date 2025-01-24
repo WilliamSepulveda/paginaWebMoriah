@@ -1,16 +1,19 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: content-box;
+    box-sizing: border-box; 
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
 }
+
 .main {
     display: flex;
-    padding: 20px;
+    width: 100%;
 }
 
 .header {
@@ -50,22 +53,22 @@ body {
 .nav_list {
     display: flex;
     flex-direction: row;
-    gap: 15px; /* Separación entre los elementos de la lista */
+    gap: 15px; 
     list-style-type: none;
 }
 
 .nav_list li {
-    position: relative; /* Necesario para la línea */
+    position: relative;
 }
 
 .nav_list li::after {
-    content: ''; /* Línea decorativa */
+    content: ''; 
     position: absolute;
-    bottom: -3px; /* Ubicación debajo del texto */
+    bottom: -3px; 
     left: 0;
     width: 100%;
-    height: 2px; /* Espesor de la línea */
-    background-color: transparent; /* Línea invisible por defecto */
+    height: 2px; 
+    background-color: transparent;
     transition: background-color 0.2s ease;
 }
 
@@ -97,3 +100,276 @@ body {
     color: black;
     padding: 15px;
 }
+
+
+.moriah_section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: red;
+    position: relative;
+}
+
+.moriah_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 05;
+}
+
+.moriah_content {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+.moriah_title {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+.moriah_span {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+.btn_visit {
+    background-color: rgba(255, 255, 255, 0.304); /* Fondo blanco semitransparente */
+    color: rgb(0, 0, 0);
+    border: rgb(245, 245, 245) solid ;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn_visit:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fondo más sólido al pasar el cursor */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_me{
+    display: flex;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.contact_me h1 {
+    color: rgb(0, 0, 0);
+    margin-left: 2vw;
+    margin-top: 5vh;
+    font-size: 4rem;
+    line-height: 4rem;
+    
+}
+
+.contact_me2 {
+    flex: 1;
+    gap: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.contact_me2 h2, h3 {
+    color: rgb(0, 0, 0);
+    padding:  15px 10px;
+    font-size: 2.5rem;
+}
+.contact_me2 p {
+    color: rgb(0, 0, 0);
+    padding: 0 10px;
+    font-size: 1.5rem;
+}
+
+.btn_contact_me {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    background-color: rgb(0, 0, 0); /* Fondo blanco semitransparente */
+    color: rgb(255, 255, 255);
+    border: none !important;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    margin-left: 3vw;
+    border-radius: 15px;
+    cursor: pointer;
+    transition:  0.3s ease;
+}
+
+.btn_contact_me:hover {
+    padding: 18px 45px;
+    background-color: #929292bd;
+}
+
+
+.about_me {
+    display: flex; 
+    width: 100%;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px;
+    gap: 20px; 
+    background-color: black;
+}
+
+.about_me_content {
+    flex: 1; /* Ocupa un espacio proporcional */
+    max-width: 50%; /* Limita el ancho máximo */
+}
+
+.about_me_content span {
+    font-size: 1.2rem;
+    color: #adadad;
+}
+
+.about_me_content h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+    color: white;
+}
+
+.about_me_content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.about_me_content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.btn_about_me {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn_about_me:hover {
+    background-color: #faf5f5;
+    color: black;
+    padding: 15px 25px;
+}
+
+.about_me_img {
+    flex: 1; /* Ocupa un espacio proporcional */
+    max-width: 50%; /* Limita el ancho máximo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_me_img img {
+    width: 100%;
+    height: auto; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  /* Contenedor de la columna grande */
+  .container_item1 {
+    width: 400px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor de las columnas pequeñas */
+  .container_item2 {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    margin-left: 5vw; 
+    padding: 10px; 
+  }
+  
+  /* Elementos principales */
+  .item, .item1, .item2, .item3 {
+    position: relative;
+    background-color: blue;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .item1 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .item2 {
+    width: 300px;
+    height: 200px;
+  }
+  .item3 {
+    width: 300px;
+    height: 200px;
+  }
+  
+  
+  
+  /* Fondo de las imágenes */
+  .item1 {
+    background-image: url('ruta-a-la-imagen1.jpg');
+  }
+  
+  .item2:nth-child(2) {
+    background-image: url('ruta-a-la-imagen2.jpg');
+  }
+  
+  .item3:nth-child(3) {
+    background-image: url('ruta-a-la-imagen3.jpg');
+  }
+  
+  /* Hover de los elementos */
+  .item:hover, .item1:hover, .item2:hover, .item3:hover{
+    background-color: black;
+    background-blend-mode: multiply;
+    transform: scale(1.05); 
+  }
+  
+  /* Texto en el centro de cada bloque */
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    z-index: 1;
+  }
+  
