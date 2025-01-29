@@ -1,0 +1,16 @@
+{
+  "name": "paginawebmoriah",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "William Sepulveda",
+  "license": "ISC",
+  "description": "Pagina de informacion de la iglesia cuadrangular moriah",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
