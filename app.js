@@ -4,11 +4,15 @@ const path = require('path');
 const app = express();
 const port = 5500;
 
-app.use(express.static(path.join(__dirname, 'src')));
+// Servir archivos estáticos correctamente
+app.use(express.static(__dirname)); // Sirve todo desde la raíz
+app.use('/css', express.static(path.join(__dirname, 'css')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
+app.use('/storage', express.static(path.join(__dirname, 'storage')));
 
-// Ruta principal
+// Servir el index.html
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html')); // Cambia 'index.html' si es necesario
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(port, () => {
