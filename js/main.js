@@ -5,31 +5,31 @@ window.initMap = function () {
     });
 };
 
+// dark mode 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector(".carousel-track");
-    if (!track) {
-        console.error("No se encontró el elemento .carousel-track");
-        return;
-    }
+// Swiper.js carrucel de eventos 
+document.addEventListener("DOMContentLoaded", function () {
+    // Swiper.js con efecto fade
+    const swiper = new Swiper(".mySwiper", {
+        effect: "fade", // Activa el efecto de desvanecimiento
+        fadeEffect: { crossFade: true }, // Mejora el efecto de transición
+        loop: true,
+        autoplay: { delay: 3000, disableOnInteraction: false },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        pagination: { el: ".swiper-pagination", clickable: true }
+    });
 
-    const trackContainer = track.parentElement; // Contenedor del carrusel
-    const cardWidth = 320; // Ajusta según el ancho de tus tarjetas
-    const maxScroll = track.scrollWidth - trackContainer.clientWidth;
-    let position = 0;
+    // Animaciones de entrada con IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    });
 
-    function scrollLeft() {
-        position = Math.min(position + cardWidth, 0);
-        track.style.transform = `translateX(${position}px)`;
-    }
-
-    function scrollRight() {
-        position = Math.max(position - cardWidth, -maxScroll);
-        track.style.transform = `translateX(${position}px)`;
-    }
-
-    // Hacer accesibles globalmente
-    window.scrollleft = scrollLeft;
-    window.scrollRight = scrollRight;
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 });
+
+
