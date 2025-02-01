@@ -16,7 +16,6 @@ body {
 }
 
 .header {
-  top: 0;
   display: flex;
   position: static;
   flex-direction: row;

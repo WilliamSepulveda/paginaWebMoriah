@@ -1,137 +1,136 @@
   @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
   * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-  }
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-  body {
-    font-family: "Red Hat Mono", serif;
+body {
+  font-family: "Red Hat Mono", serif;
+  font-weight: 700;
+    font-style: normal;    
     background-color: #f2f2f2;
     color: #333;
-    line-height: 1.6;
-  }
+    line-height: 1;
+}
 
-  .main {
+.header {
+  display: flex;
+  position: static;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  padding: 10px 20px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.header-content {
     display: flex;
     flex-direction: column;
-    width: 100%;
-  }
+    left: 0;
+    margin-right: 10vw;
+}
 
-  .header {
-    top: 0;
-    display: flex;
-    position: static;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #000;
+.header img {
+    width: 80px;
+}
+
+.header h1, .header p {
+  color: #ffffff;
+  margin: 0;
+}
+
+.nav_Moriah {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  list-style-type: none;
+  position: relative;
+}
+
+.nav_list li {
+  position: relative;
+  animation: fadeInUp 1s ease-out;
+  transform-origin: 0.5s inline;
+}
+
+.nav_list li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+  font-size: 16px;
+}
+
+.nav_list li a:hover {
+    color: blueviolet;
+}
+
+.nav_list li:hover::after {
+    background-color: blueviolet;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #35363787;
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.dropdown_menu li {
     padding: 10px 20px;
-    animation: fadeInDown 1s ease-out;
-  }
+    white-space: nowrap;
+}
 
-  .header-content {
-      display: flex;
-      flex-direction: column;
-      left: 0;
-      margin-right: 10vw;
-  }
 
-  .header img {
-      width: 80px;
-  }
-
-  .header h1, .header p {
-    color: #f2f2f2;
-    margin: 0;
-  }
-
-  .nav_Moriah {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-  }
-
-  .nav_list {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    list-style-type: none;
-    position: relative;
-  }
-
-  .nav_list li {
-    position: relative;
-    animation: fadeInUp 1s ease-out;
-  }
-
-  .nav_list li a {
+.dropdown_menu li a {
+    color: #ffffff;
     text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
+    display: block;
+    transition: color 0.3s;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.dropdown_menu li a:hover {
+    color: blueviolet;
     font-size: 16px;
-  }
+}
 
-  .nav_list li a:hover {
-      color: blueviolet;
-  }
+.dropdown:hover .dropdown_menu {
+    display: block;
+}
 
-  .nav_list li:hover::after {
-      background-color: blueviolet;
-  }
+.new_button {
+    background-color: rgb(105, 104, 104);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-  .dropdown_menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #282c34;
-      padding: 10px 0;
-      list-style: none;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      z-index: 1000;
-      min-width: 150px;
-  }
-
-  .dropdown_menu li {
-      padding: 10px 20px;
-      white-space: nowrap;
-  }
-
-  .dropdown_menu li a {
-      color: white;
-      text-decoration: none;
-      display: block;
-      transition: color 0.3s;
-      font-size: 14px;
-  }
-
-  .dropdown_menu li a:hover {
-      color: blueviolet;
-  }
-
-  .dropdown:hover .dropdown_menu {
-      display: block;
-  }
-
-  .new_button {
-      background-color: rgb(105, 104, 104);
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 14px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-  }
-
-  .new_button:hover {
-      background-color: white;
-      color: black;
-      transform: scale(1.05);
-  }
+.new_button:hover {
+    background-color: blueviolet;
+    color: black;
+    transform: scale(1.05);
+}
 
 
 
@@ -143,6 +142,7 @@
     justify-content: center;
     overflow: hidden;
     position: relative;
+    z-index: -10;
     animation: fadeIn 1.5s ease-in-out;
   } 
 
