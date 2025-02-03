@@ -1,11 +1,14 @@
-window.initMap = function () {
+function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
       center: { lat: 7.172495991830042, lng:-73.13366387789854  },
-      zoom: 20,
+      zoom: 8,
     });
-};
+  }
+  
+  window.initMap = initMap; // Hacer accesible globalmente
+  
 
-// dark mode 
+
 
 
 // Swiper.js carrucel de eventos 
@@ -32,4 +35,29 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 });
 
+
+// Obtener elementos del DOM
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMoriah = document.getElementById('navMoriah');
+    const overlay = document.getElementById('menu-overlay');
+    const menuBtn = document.getElementById('menu-btn');
+
+    function toggleMenu() {
+        if (navMoriah.classList.contains('open')) {
+            navMoriah.classList.remove('open');
+            overlay.classList.remove('active');
+            menuToggle.checked = false;
+        } else {
+            navMoriah.classList.add('open');
+            overlay.classList.add('active');
+        }
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+});
+
+
+  
 
