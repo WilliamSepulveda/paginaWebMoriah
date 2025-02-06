@@ -1,137 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Mono:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+
 body {
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    font-style: normal;    
-    background-color: #f2f2f2;
-    color: #333;
-    line-height: 1;
+font-family: "Red Hat Mono", serif;
+font-style: normal;    
+width: 100%;
+flex-wrap: wrap;
+
 }
 
 .header {
-  display: flex;
-  position: static;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #ffffff;
-  padding: 10px 20px;
-  animation: fadeInDown 1s ease-out;
+display: flex;
+position: static;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+background-color: #000000;
+width: 100%;
+padding: 18px;
+flex-wrap: wrap;
+
 }
 
+
 .header-content {
-    display: flex;
-    flex-direction: column;
-    left: 0;
-    margin-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  margin-right: 10vw;
 }
 
 .header img {
-    width: 80px;
+  width: 80px;
 }
 
 .header h1, .header p {
-  color: #000000;
-  margin: 0;
+color: #ffffff;
+margin: 0;
 }
 
 .nav_Moriah {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+display: flex;
+align-items: center;
+gap: 50px;
 }
 
 .nav_list {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  list-style-type: none;
-  position: relative;
+display: flex;
+flex-direction: row;
+gap: 50px;
+list-style-type: none;
+position: relative;
 }
 
 .nav_list li {
-  position: relative;
-  animation: fadeInUp 1s ease-out;
-  transform-origin: 0.5s inline;
+position: relative;
+animation: fadeInUp 1s ease-out;
+transform-origin: 0.5s inline;
 }
 
 .nav_list li a {
-  text-decoration: none;
-  color: #000000;
-  transition: color 0.3s ease;
-  font-size: 16px;
+text-decoration: none;
+color: #ffffff;
+transition: color 0.3s ease;
+font-size: 16px;
 }
 
 .nav_list li a:hover {
-    color: blueviolet;
+  color: blueviolet;
 }
 
 .nav_list li:hover::after {
-    background-color: blueviolet;
+  background-color: blueviolet;
 }
 
 .dropdown_menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #e1e6ee;
-    padding: 10px 0;
-    list-style: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    z-index: 1000;
-    min-width: 150px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #35363787;
+  padding: 10px 0;
+  list-style: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+  min-width: 150px;
 }
 
 .dropdown_menu li {
-    padding: 10px 20px;
-    white-space: nowrap;
+padding: 10px 20px;
+  white-space: nowrap;
 }
 
 
 .dropdown_menu li a {
-    color: #000000;
-    text-decoration: none;
-    display: block;
-    transition: color 0.3s;
-    font-size: 14px;
-    transition: 0.2s;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s;
+  font-size: 14px;
+  transition: 0.2s;
 }
 
 .dropdown_menu li a:hover {
-    color: blueviolet;
-    font-size: 16px;
+  color: blueviolet;
+  font-size: 16px;
+
 }
 
 .dropdown:hover .dropdown_menu {
-    display: block;
+  display: block;
+  transition-duration: 2s linear;
+
 }
 
 .new_button {
-    background-color: rgb(105, 104, 104);
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  background-color: rgb(105, 104, 104);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .new_button:hover {
-    background-color: blueviolet;
-    color: black;
-    transform: scale(1.05);
+  background-color: blueviolet;
+  color: black;
+  transform: scale(1.05);
 }
 
+/* From Uiverse.io by talhabangyal */ 
+.hamburger {
+display: none;
+cursor: pointer;
+margin-right: 15vw;
+}
+
+.hamburger input {
+display: none;
+}
+
+.hamburger svg {
+/* The size of the SVG defines the overall size */
+height: 3em;
+/* Define the transition for transforming the SVG */
+transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+fill: none;
+stroke: white;
+stroke-linecap: round;
+stroke-linejoin: round;
+stroke-width: 3;
+/* Define the transition for transforming the Stroke */
+transition:
+  stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+stroke-dasharray: 20 300;
+stroke-dashoffset: -32.42;
+}
+
+
+  
 /* Contenedor con efecto Parallax */
 .main_visitanos {
     position: relative;
@@ -142,6 +193,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 /* Contenedor de texto con efecto flotante */
@@ -285,3 +337,104 @@ footer {
     text-align: center;
     margin-top: 20px;
 }
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente oculto */
+    width: 250px;
+    height: 100%;
+    background: #333;
+    color: white;
+    transition: left 0.3s ease;
+}
+
+.nav-menu.open {
+    left: 0; /* Muestra el menú */
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+    .header img {
+        margin-top: 3vh;
+    }
+
+    .header-content {
+        transform: translate(-80px, 15px);
+    }
+
+    .nav_Moriah {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 50px;
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+      }
+      .nav_Moriah.open {
+        display: flex;
+      }
+    
+      .hamburger {
+        display: block;
+        transform: translate(310px, -45px);
+      }
+      .nav_list {
+        flex-direction: column;
+        gap: 50px;
+      }
+    
+      .nav_list li {
+        text-align: center;
+      }
+      .dropdown_menu {
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+      }
+    
+      .dropdown:hover .dropdown_menu {
+        display: block;
+      }
+    .main_visitanos {
+        height: auto;
+        padding: 40px 20px;
+    }
+    .Domingos h1, .miercoles h1, .jueves h1 {
+        font-size: 1.8rem;
+    }
+    .Domingos p, .miercoles p, .jueves p {
+        font-size: 1.2rem;
+    }
+    .footer-section {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header img {
+        width: 50px;
+    }
+    .new_button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    .texto {
+        font-size: 16px;
+    }
+    .countdown-container {
+        font-size: 18px;
+    }
+    .countdown {
+        min-width: 80px;
+    }
+}
+
