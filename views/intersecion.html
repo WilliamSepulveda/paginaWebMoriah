@@ -1,96 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/intersecion.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/intersecion.css" />
+    <script type="module" src="../js/intersecion.js"></script>
     <title>interseción</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header" data-aos="fade-down">
-        <a href="../index.html">
-            <img src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png" alt="Logo Moriah">
-        </a>
-        <div class="header-content">
-            <h1>MORIAH</h1>
-            <p>sacrificio de adoración</p>
-        </div>
-        <nav class="nav_Moriah" data-aos="fade-up">
-            <ul class="nav_list">
-                <li><a href="../views/visitanos.html">Visítanos</a></li>
-                <li><a href="../views/about.html">Acerca nosotros</a></li>
-                <li><a href="#">peticiones</a></li>
-                <li class="dropdown">
-                    <a href="#">Ministerios</a>
-                    <ul class="dropdown_menu">
-                        <li><a href="#">Jóvenes</a></li>
-                        <li><a href="#">Alabanza</a></li>
-                        <li><a href="#">Intercesión</a></li>
-                        <li><a href="#">Diáconos</a></li>
-                        <li><a href="#">Infantil</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Próximos pasos</a></li>
+      <a href="../index.html">
+        <img
+          src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png"
+          alt="Logo Moriah"
+        />
+      </a>
+      <div class="header-content">
+        <h1>MORIAH</h1>
+        <p>sacrificio de adoración</p>
+      </div>
+      <nav class="nav_Moriah" data-aos="fade-up">
+        <ul class="nav_list">
+          <li><a href="../views/visitanos.html">Visítanos</a></li>
+          <li><a href="../views/about.html">Acerca nosotros</a></li>
+          <li><a href="#">peticiones</a></li>
+          <li class="dropdown">
+            <a href="#">Ministerios</a>
+            <ul class="dropdown_menu">
+              <li><a href="#">Jóvenes</a></li>
+              <li><a href="#">Alabanza</a></li>
+              <li><a href="#">Intercesión</a></li>
+              <li><a href="#">Diáconos</a></li>
+              <li><a href="#">Infantil</a></li>
             </ul>
-            <button class="new_button">¿Eres nuevo?</button>
-        </nav>
+          </li>
+          <li><a href="#">Próximos pasos</a></li>
+        </ul>
+        <button class="new_button">¿Eres nuevo?</button>
+      </nav>
     </header>
 
     <div class="container">
-        <div class="background">
-          <div class="pattern"></div>
+      <section class="information">
+        <h2>
+          En nuestro ministerio de intercesión estamos ansiosos de poder
+          ayudarte<br />
+          y ser un apoyo en la oración para peticiones
+        </h2>
+        <div class="integrantes">
+          <h2>Integrantes</h2>
+          <ul>
+            <li>Juan Pérez - Líder de Intercesión</li>
+            <li>María Gómez - Coordinadora de oración</li>
+            <li>Carlos Ramírez - Apoyo espiritual</li>
+            <li>Ana Torres - Intercesora</li>
+          </ul>
         </div>
-        <div class="content">
-          <h1 class="title">¿Necesitas? <span class="highlight">¿Oración?</span></h1>
-          <p class="description">
-            Ya sea que estés atravesando una etapa difícil en tu vida, tengas dudas
-            espirituales o necesites aliento, el equipo de oración está aquí para orar por ti.
-            Completa la siguiente información para que podamos brindarte el mejor servicio. Ten
-            en cuenta que cualquier información que proporciones es completamente confidencial.
-          </p>
-          <div class="form-container">
-            <h2 class="form-title">Solicitar oración</h2>
-            <form id="whatsappForm" onsubmit="enviarWhatsapp(event)">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <br>
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
-                <br>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-                <br>
-                <button type="submit">Enviar a WhatsApp</button>
-              </form>
-          </div>
+        <div class="imgGrupo">
+          <img src="team.jpg" alt="Grupo de oración" />
         </div>
-      </div>
+      </section>
+
+      <section class="content">
+        <h1 class="title">
+          ¿Necesitas <span class="highlight">Oración?</span>
+        </h1>
+        <p class="description">
+          Ya sea que estés atravesando una etapa difícil en tu vida, tengas
+          dudas espirituales o necesites aliento, el equipo de oración está aquí
+          para orar por ti. Completa la siguiente información para que podamos
+          brindarte el mejor servicio.
+        </p>
+        <div class="form-container">
+          <h2 class="form-title">Solicitar oración</h2>
+          <form id="whatsappForm" onsubmit="enviarWhatsapp(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required />
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar a WhatsApp</button>
+          </form>
+        </div>
+      </section>
+    </div>
 
     <script>
       function enviarWhatsapp(event) {
-          event.preventDefault(); // Evitar el envío del formulario tradicional
+        event.preventDefault(); // Evitar el envío del formulario tradicional
 
-          // Recoger los valores del formulario
-          const nombre = document.getElementById("nombre").value;
-          const telefono = document.getElementById("telefono").value;
-          const mensaje = document.getElementById("mensaje").value;
+        // Recoger los valores del formulario
+        const nombre = document.getElementById("nombre").value;
+        const telefono = document.getElementById("telefono").value;
+        const mensaje = document.getElementById("mensaje").value;
 
-          // Validar si el teléfono tiene el formato correcto
-          if (!telefono.match(/^\d+$/)) {
-            alert("Por favor, ingresa un número de teléfono válido.");
-            return;
-          }
+        // Validar si el teléfono tiene el formato correcto
+        if (!telefono.match(/^\d+$/)) {
+          alert("Por favor, ingresa un número de teléfono válido.");
+          return;
+        }
 
-          // Crear el mensaje a enviar
-          const mensajeCompleto = `Hola, mi nombre es ${nombre}. Te escribo desde el número ${telefono}. Mensaje: ${mensaje}`;
+        // Crear el mensaje a enviar
+        const mensajeCompleto = `Hola, mi nombre es ${nombre}. Te escribo desde el número ${telefono}. Mensaje: ${mensaje}`;
 
-          // Crear el enlace para abrir WhatsApp con el mensaje predefinido
-          const numeroWhatsApp = '+573134024782'; // Asegúrate de que el número esté bien formateado (con el código de país)
-          const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensajeCompleto)}`;
-          
-          // Redirigir a WhatsApp
-          window.open(url, "_blank");
+        // Crear el enlace para abrir WhatsApp con el mensaje predefinido
+        const numeroWhatsApp = "+573134024782"; // Asegúrate de que el número esté bien formateado (con el código de país)
+        const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
+          mensajeCompleto
+        )}`;
+
+        // Redirigir a WhatsApp
+        window.open(url, "_blank");
       }
     </script>
-</body>
+  </body>
 </html>
