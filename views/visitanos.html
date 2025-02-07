@@ -1,174 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visitanos</title>
-    <link rel="stylesheet" href="../css/visitanos.css">
+    <link rel="stylesheet" href="../css/visitanos.css" />
     <script type="module" src="../js/visitanos.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header" data-aos="fade-down">
-        <a href="../index.html">
-            <img src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png" alt="Logo Moriah">
-        </a>
-        
-        <div class="header-content">
-            <h1>MORIAH</h1>
-            <p>sacrificio de adoración</p>
-        </div>
+      <a href="../index.html">
+        <img
+          src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png"
+          alt="Logo Moriah"
+        />
+      </a>
 
-        <!-- Menú hamburguesa -->
-        <div class="hamburger" id="menu-btn">
-            <input type="checkbox" id="menu-toggle">
-            <svg viewBox="0 0 32 32">
-                <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-                <path class="line" d="M7 16 27 16"></path>
-            </svg>
-        </div>
+      <div class="header-content">
+        <h1>MORIAH</h1>
+        <p>sacrificio de adoración</p>
+      </div>
 
+      <!-- Menú hamburguesa -->
+      <div class="hamburger" id="menu-btn">
+        <input type="checkbox" id="menu-toggle" />
+        <svg viewBox="0 0 32 32">
+          <path
+            class="line line-top-bottom"
+            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+          ></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+      </div>
 
-        <!-- Menú de navegación -->
-        <nav class="nav_Moriah" id="navMoriah">
-            <ul class="nav_list">
-                <li><a href="./views/visitanos.html">Visítanos</a></li>
-                <li><a href="./views/about.html">Acerca de nosotros</a></li>
-                <li><a href="./views/intersecion.html">Peticiones</a></li>
-                <li class="dropdown">
-                    <a href="#">Ministerios</a>
-                    <ul class="dropdown_menu">
-                        <li><a href="#">Jóvenes</a></li>
-                        <li><a href="#">Alabanza</a></li>
-                        <li><a href="#">Intercesión</a></li>
-                        <li><a href="#">Diáconos</a></li>
-                        <li><a href="#">Infantil</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Próximos pasos</a></li>
+      <!-- Menú de navegación -->
+      <nav class="nav_Moriah" id="navMoriah">
+        <ul class="nav_list">
+          <li><a href="../views/visitanos.html">Visítanos</a></li>
+          <li><a href="../views/about.html">Acerca de nosotros</a></li>
+          <li><a href="../views/intersecion.html">Peticiones</a></li>
+          <li class="dropdown">
+            <a href="#">Ministerios</a>
+            <ul class="dropdown_menu">
+              <li><a href="#">Jóvenes</a></li>
+              <li><a href="#">Alabanza</a></li>
+              <li><a href="#">Intercesión</a></li>
+              <li><a href="#">Diáconos</a></li>
+              <li><a href="#">Infantil</a></li>
             </ul>
-            <button class="new_button">¿Eres nuevo?</button>
-        </nav>
+          </li>
+          <li><a href="#">Próximos pasos</a></li>
+        </ul>
+        <button class="new_button">¿Eres nuevo?</button>
+      </nav>
 
-        <!-- Overlay para cerrar el menú -->
-        <div class="overlay" id="menu-overlay"></div>
+      <!-- Overlay para cerrar el menú -->
+      <div class="overlay" id="menu-overlay"></div>
     </header>
 
     <main class="main_visitanos">
-        <section class="Domingos">
-            <h1>Domingos</h1>
-            <p>Esperamos verte este domingo en nuestro servicio de la mañana a las 9:00 am</p>
-            <p class="parrafo2">En nuestro culto familiar, trae a un familiar y disfruta de un momento con Dios</p>
-            
-            <h1>Cuenta regresiva</h1>
-            <h2>Próximo Domingo 9:00 AM:</h2>
-    <div class="countdown-container" id="countdownSunday"></div>
-        </section>
-    
-        <section class="miercoles">
-            <h1>Martes en la noche</h1>
-            <p>Los servicios de los miércoles comienzan con un momento de oración y adoración a las 7:00 p. m.</p>
-            <p class="parrafo2M">Luego el momento de la prédica e himnos para recordar las épocas de los cánticos de los apóstoles</p>
-            <h1>Cuenta regresiva</h1>
-    <h2>Próximo martes 7:00 PM:</h2>
-    <div class="countdown-container" id="countdownWednesday"></div>
-        </section>
-    
-        <section class="jueves">
-            <h1>Jueves en la noche</h1>
-            <p>Los jueves tenemos "Taller del Alfarero", un espacio en donde nuestra iglesia abre sus puertas para un momento de oración y peticiones a Dios.</p>
-        </section>
+      <section class="Domingos">
+        <h1>Domingos</h1>
+        <p>
+          Esperamos verte este domingo en nuestro servicio de la mañana a las
+          9:00 am
+        </p>
+        <p class="parrafo2">
+          En nuestro culto familiar, trae a un familiar y disfruta de un momento
+          con Dios
+        </p>
+
+        <h1>Cuenta regresiva</h1>
+        <h2>Próximo Domingo 9:00 AM:</h2>
+        <div class="countdown-container" id="countdownSunday"></div>
+      </section>
+
+      <section class="miercoles">
+        <h1>Martes en la noche</h1>
+        <p>
+          Los servicios de los miércoles comienzan con un momento de oración y
+          adoración a las 7:00 p. m.
+        </p>
+        <p class="parrafo2M">
+          Luego el momento de la prédica e himnos para recordar las épocas de
+          los cánticos de los apóstoles
+        </p>
+        <h1>Cuenta regresiva</h1>
+        <h2>Próximo martes 7:00 PM:</h2>
+        <div class="countdown-container" id="countdownWednesday"></div>
+      </section>
+
+      <section class="jueves">
+        <h1>Jueves en la noche</h1>
+        <p>
+          Los jueves tenemos "Taller del Alfarero", un espacio en donde nuestra
+          iglesia abre sus puertas para un momento de oración y peticiones a
+          Dios.
+        </p>
+      </section>
     </main>
     <!DOCTYPE html>
     <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Footer</title>
         <style>
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-                background-color: #111;
-                color: white;
-            }
-            footer {
-                background-color: #111;
-                padding: 40px;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
-                flex-wrap: wrap;
-            }
-            .footer-section {
-                max-width: 300px;
-            }
-            .footer-section h3 {
-                margin-bottom: 10px;
-            }
-            .footer-links {
-                list-style: none;
-                padding: 0;
-            }
-            .footer-links li {
-                margin-bottom: 8px;
-            }
-            .footer-links a {
-                color: white;
-                text-decoration: none;
-            }
-            .newsletter {
-                max-width: 300px;
-            }
-            .newsletter input {
-                width: 100%;
-                padding: 10px;
-                margin-top: 10px;
-                border: none;
-            }
-            .newsletter button {
-                background: none;
-                border: 1px solid white;
-                color: white;
-                padding: 10px;
-                cursor: pointer;
-                margin-top: 5px;
-                width: 100%;
-            }
-            .copyright {
-                text-align: center;
-                margin-top: 20px;
-            }
+          body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+          }
+          footer {
+            background-color: #111;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+          }
+          .footer-section {
+            max-width: 300px;
+          }
+          .footer-section h3 {
+            margin-bottom: 10px;
+          }
+          .footer-links {
+            list-style: none;
+            padding: 0;
+          }
+          .footer-links li {
+            margin-bottom: 8px;
+          }
+          .footer-links a {
+            color: white;
+            text-decoration: none;
+          }
+          .newsletter {
+            max-width: 300px;
+          }
+          .newsletter input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+          }
+          .newsletter button {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 5px;
+            width: 100%;
+          }
+          .copyright {
+            text-align: center;
+            margin-top: 20px;
+          }
         </style>
-    </head>
-    <body>
-        <footer>
-            <div class="footer-section">
-                <h3>GOOD NEWS</h3>
-                <p>7415 Hickory St.<br>Omaha, NE 68124</p>
-                <p>Lunes a jueves, de 8:30 a. m. a 5:30 p. m.</p>
-                <p>402.391.6515</p>
-                <p>info@buenasnoticias.iglesia</p>
-            </div>
-            <div class="footer-section">
-                <h3>Enlaces</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Acerca de</a></li>
-                    <li><a href="#">Personal</a></li>
-                    <li><a href="#">Noticias</a></li>
-                    <li><a href="#">Recursos</a></li>
-                    <li><a href="#">Servir</a></li>
-                    <li><a href="#">Mensajes</a></li>
-                    <li><a href="#">Constructores del Reino</a></li>
-                </ul>
-            </div>
-            <div class="footer-section newsletter">
-                <h3>Suscríbete a nuestra Newsletter</h3>
-                <input type="email" placeholder="Tu correo electrónico">
-                <button>Suscribir</button>
-            </div>
+      </head>
+      <body>
+        <footer class="footer">
+          <video autoplay loop muted playsinline id="video-footer">
+            <source src="../storage/moriah.mp4" type="video/mp4" />
+          </video>
         </footer>
-        <div class="copyright">
-            <p>&copy; 2022 Iglesia Buenas Nuevas</p>
-        </div>
-</body>
+      </body>
+    </html>
+  </body>
 </html>

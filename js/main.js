@@ -1,7 +1,7 @@
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
       center: { lat: 7.172495991830042, lng:-73.13366387789854  },
-      zoom: 8,
+      zoom: 20,
     });
   }
   
@@ -44,20 +44,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menu-btn');
 
     function toggleMenu() {
-        if (navMoriah.classList.contains('open')) {
+        const isOpen = navMoriah.classList.contains('open');
+
+        if (isOpen) {
             navMoriah.classList.remove('open');
             overlay.classList.remove('active');
-            menuToggle.checked = false;
+            menuToggle.checked = false; // Desmarcar el checkbox
         } else {
             navMoriah.classList.add('open');
             overlay.classList.add('active');
+            menuToggle.checked = true; // Marcar el checkbox
         }
     }
 
     menuBtn.addEventListener('click', toggleMenu);
     overlay.addEventListener('click', toggleMenu);
 });
-
 
   
 
