@@ -726,7 +726,81 @@ stroke-dashoffset: -32.42;
     opacity: 0.9;
   }
   
+  @media (max-width: 1024px) {
+    
+     .main_about {
+        padding: 5px;
+      }
+    
+    .sectionOne {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+  }
 
+    .sectionOne h1{
+      font-size: 1rem;
+    }
+
+    .sectionOne h2{
+      font-size: 2rem;
+      padding-bottom: 55px;
+    }
+
+    .vision_section{
+      /* background-color: orange; */
+      display: flex;
+      flex-direction: column;
+    }
+    .vision_text{
+      max-width: 90%;
+    }
+    .team-section{
+      /* background-color: blueviolet; */
+      display: flex;
+      flex-direction: column;
+    }
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+    }
+    .leadership-section{
+      /* background-color: green; */
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .leader-details {
+      /* background-color: red; */
+      min-width: 300px;
+      margin-left: -55px;
+    }
+
+    .ministerios {
+      flex-direction: column;
+      width: 100%;
+      /* background-color: blue; */
+    }
+    .iglesia {
+      /* background-color: purple; */
+      display: flex;
+      flex-direction: column;
+    }
+    .contenido-iglesia{
+      display: flex;
+      flex-direction: column;
+    }
+    .content_ministerios{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* background-color: red; */
+    }
+
+    
+  }
     
   @media (max-width: 768px) {
     .header {
@@ -805,7 +879,7 @@ stroke-dashoffset: -32.42;
         max-width: 100%;
       }
       .main_about {
-        background-color: red;
+        /* background-color: red; */
         padding: 5px;
       }
     
@@ -825,7 +899,7 @@ stroke-dashoffset: -32.42;
     }
 
     .vision_section{
-      background-color: orange;
+      /* background-color: orange; */
       display: flex;
       flex-direction: column;
     }
@@ -833,7 +907,7 @@ stroke-dashoffset: -32.42;
       max-width: 90%;
     }
     .team-section{
-      background-color: blueviolet;
+      /* background-color: blueviolet; */
       display: flex;
       flex-direction: column;
     }
@@ -844,28 +918,24 @@ stroke-dashoffset: -32.42;
 
     }
     .leadership-section{
-      background-color: green;
+      /* background-color: green; */
       display: flex;
       flex-direction: column;
       width: 100%;
     }
     .leader-details {
-      background-color: red;
+      /* background-color: red; */
       min-width: 300px;
       margin-left: -55px;
     }
 
-
-    .ministeriosA{
-      background-color: yellow;
-    }
     .ministerios {
       flex-direction: column;
       width: 100%;
-      background-color: blue;
+      /* background-color: blue; */
     }
     .iglesia {
-      background-color: purple;
+      /* background-color: purple; */
       display: flex;
       flex-direction: column;
     }
@@ -877,7 +947,7 @@ stroke-dashoffset: -32.42;
       width: 100%;
       display: flex;
       flex-direction: column;
-      background-color: red;
+      /* background-color: red; */
     }
 
     
