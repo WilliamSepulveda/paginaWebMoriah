@@ -10,58 +10,88 @@
   <body>
     <header class="header" data-aos="fade-down">
       <a href="../index.html">
-        <img
-          src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png"
-          alt="Logo Moriah"
-        />
+          <img src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png" alt="Logo Moriah">
       </a>
+      
       <div class="header-content">
-        <h1>MORIAH</h1>
-        <p>sacrificio de adoración</p>
+          <h1>MORIAH</h1>
+          <p>sacrificio de adoración</p>
       </div>
-      <nav class="nav_Moriah" data-aos="fade-up">
-        <ul class="nav_list">
-          <li><a href="../views/visitanos.html">Visítanos</a></li>
-          <li><a href="../views/about.html">Acerca nosotros</a></li>
-          <li><a href="#">peticiones</a></li>
-          <li class="dropdown">
-            <a href="#">Ministerios</a>
-            <ul class="dropdown_menu">
-              <li><a href="#">Jóvenes</a></li>
-              <li><a href="#">Alabanza</a></li>
-              <li><a href="#">Intercesión</a></li>
-              <li><a href="#">Diáconos</a></li>
-              <li><a href="#">Infantil</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Próximos pasos</a></li>
-        </ul>
-        <button class="new_button">¿Eres nuevo?</button>
+  
+      <!-- Menú hamburguesa -->
+      <div class="hamburger" id="menu-btn">
+          <input type="checkbox" id="menu-toggle">
+          <svg viewBox="0 0 32 32">
+              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+              <path class="line" d="M7 16 27 16"></path>
+          </svg>
+      </div>
+  
+  
+      <!-- Menú de navegación -->
+      <nav class="nav_Moriah" id="navMoriah">
+          <ul class="nav_list">
+              <li><a href="../views/visitanos.html">Visítanos</a></li>
+              <li><a href="../views/about.html">Acerca de nosotros</a></li>
+              <li><a href="../views/intersecion.html">Peticiones</a></li>
+              <li class="dropdown">
+                  <a href="#">Ministerios</a>
+                  <ul class="dropdown_menu">
+                      <li><a href="#">Jóvenes</a></li>
+                      <li><a href="#">Alabanza</a></li>
+                      <li><a href="#">Intercesión</a></li>
+                      <li><a href="#">Diáconos</a></li>
+                      <li><a href="#">Infantil</a></li>
+                  </ul>
+              </li>
+              <li><a href="#">Próximos pasos</a></li>
+          </ul>
+          <button class="new_button">¿Eres nuevo?</button>
       </nav>
-    </header>
+  
+      <!-- Overlay para cerrar el menú -->
+      <div class="overlay" id="menu-overlay"></div>
+  </header>
 
     <div class="container">
-      <section class="information">
-        <h2>
-          En nuestro ministerio de intercesión estamos ansiosos de poder
-          ayudarte<br />
-          y ser un apoyo en la oración para peticiones
-        </h2>
-        <div class="integrantes">
-          <h2>Integrantes</h2>
-          <ul>
-            <li>Juan Pérez - Líder de Intercesión</li>
-            <li>María Gómez - Coordinadora de oración</li>
-            <li>Carlos Ramírez - Apoyo espiritual</li>
-            <li>Ana Torres - Intercesora</li>
-          </ul>
-        </div>
-        <div class="imgGrupo">
-          <img src="team.jpg" alt="Grupo de oración" />
-        </div>
-      </section>
 
-      <section class="content">
+      <section class="ministerio">
+        <div class="contenido">
+            <h1>Ministerio de Intercesión</h1>
+            <p>El Ministerio de Intercesión es un pilar fundamental en nuestra iglesia, donde nos unimos en oración para clamar por las necesidades de nuestra comunidad, familias, líderes y el mundo. Creemos en el poder de la oración como herramienta de transformación y restauración.</p>
+        </div>
+        <div class="fondo">
+        </div>
+    </section>
+
+     <div class="containerinfo">
+        <div class="card">
+          <img src="../storage/pexelsAlabanza.jpg" class="image">
+            <div class="content">
+                <h2>Ministerio de interseción</h2>
+                <p>El Departamento de Intercesión es una base esencial <br> en nuestro templo, donde nos congregamos en oración para suplicar <br> 
+                  por las urgencias de nuestra comunidad, nuestros hogares, guías y el planeta. <br>
+                   Creemos en el poder de la oración como medio de cambio y reconstrucción.</p>
+                <div class="buttons">
+                    <button class="btn black">Get Started</button>
+                    <button class="btn gray">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <h2>Start with Site Templates</h2>
+                <p>Browse dozens of templates. Click, duplicate, customize.</p>
+                <div class="buttons">
+                    <button class="btn black">Get Started</button>
+                    <button class="btn gray">Learn More</button>
+                </div>
+            </div>
+            <img src="../storage/pexelsAlabanza.jpg" class="image">
+        </div>
+    </div>
+      <section class="contentform">
         <h1 class="title">
           ¿Necesitas <span class="highlight">Oración?</span>
         </h1>

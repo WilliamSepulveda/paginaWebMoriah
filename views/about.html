@@ -7,41 +7,83 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
-    <script type="module" src="../js/about.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="../js/about.js"></script>
     <title>About</title>
 </head>
 <body>
     
-    <header class="header" data-aos="fade-down">
-        <a href="../index.html">
-            <img src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png" alt="Logo Moriah">
-        </a>
-        <div class="header-content">
-            <h1>MORIAH</h1>
-            <p>sacrificio de adoración</p>
-        </div>
-        <nav class="nav_Moriah" data-aos="fade-up">
-            <ul class="nav_list">
-                <li><a href="../views/visitanos.html">Visítanos</a></li>
-                <li><a href="#">Acerca nosotros</a></li>
-                <li><a href="./views/intersecion.html">peticiones</a></li>
-                <li class="dropdown">
-                    <a href="#">Ministerios</a>
-                    <ul class="dropdown_menu">
-                        <li><a href="#">Jóvenes</a></li>
-                        <li><a href="#">Alabanza</a></li>
-                        <li><a href="#">Intercesión</a></li>
-                        <li><a href="#">Diáconos</a></li>
-                        <li><a href="#">Infantil</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Próximos pasos</a></li>
-            </ul>
-            <button class="new_button">¿Eres nuevo?</button>
-        </nav>
-    </header>
+  <header class="header" data-aos="fade-down">
+    <a href="../index.html">
+        <img src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png" alt="Logo Moriah">
+    </a>
+    
+    <div class="header-content">
+        <h1>MORIAH</h1>
+        <p>sacrificio de adoración</p>
+    </div>
+
+    <!-- Menú hamburguesa -->
+    <div class="hamburger" id="menu-btn">
+        <input type="checkbox" id="menu-toggle">
+        <svg viewBox="0 0 32 32">
+            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+            <path class="line" d="M7 16 27 16"></path>
+        </svg>
+    </div>
+
+
+    <!-- Menú de navegación -->
+    <nav class="nav_Moriah" id="navMoriah">
+        <ul class="nav_list">
+            <li><a href="../views/visitanos.html">Visítanos</a></li>
+            <li><a href="../views/about.html">Acerca de nosotros</a></li>
+            <li><a href="../views/intersecion.html">Peticiones</a></li>
+            <li class="dropdown">
+                <a href="#">Ministerios</a>
+                <ul class="dropdown_menu">
+                    <li><a href="#">Jóvenes</a></li>
+                    <li><a href="#">Alabanza</a></li>
+                    <li><a href="#">Intercesión</a></li>
+                    <li><a href="#">Diáconos</a></li>
+                    <li><a href="#">Infantil</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Próximos pasos</a></li>
+        </ul>
+        <button class="new_button">¿Eres nuevo?</button>
+    </nav>
+
+    <!-- Overlay para cerrar el menú -->
+    <div class="overlay" id="menu-overlay"></div>
+  </header>
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMoriah = document.getElementById('navMoriah');
+  const overlay = document.getElementById('menu-overlay');
+  const menuBtn = document.getElementById('menu-btn');
+
+  function toggleMenu() {
+      const isOpen = navMoriah.classList.contains('open');
+
+      if (isOpen) {
+          navMoriah.classList.remove('open');
+          overlay.classList.remove('active');
+          menuToggle.checked = false; // Desmarcar el checkbox
+      } else {
+          navMoriah.classList.add('open');
+          overlay.classList.add('active');
+          menuToggle.checked = true; // Marcar el checkbox
+      }
+  }
+
+  menuBtn.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+});
+  </script>
     <main class="main_about">
         <section class="sectionOne">
             <img src="https://casaroca.org/wp-content/uploads/2021/07/2021-PP-WEB-BANNER-OSCUROV2-scaled.jpg" alt="">

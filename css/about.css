@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
 * {
   padding: 0;
   margin: 0;
@@ -7,24 +8,25 @@
 }
 
 body {
-    font-family: "Red Hat Mono", serif;
-    font-weight: 700;
-    font-style: normal;    
-    background-color: #f2f2f2;
-    color: #333;
-    line-height: 1;
+font-family: "Red Hat Mono", serif;
+font-style: normal;    
+width: 100%;
+flex-wrap: wrap;
 }
 
 .header {
-display: flex;
-position: static;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-background-color: #000000;
-padding: 10px 20px;
-animation: fadeInDown 1s ease-out;
+  padding: 10px;
+  display: flex;
+  position: static;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  width: 100%;
+  flex-wrap: wrap;
+
 }
+
 
 .header-content {
   display: flex;
@@ -70,15 +72,16 @@ font-size: 16px;
 }
 
 .nav_list li a:hover {
-  color: blueviolet;
+  color: rgb(4, 103, 240);
 }
 
 .nav_list li:hover::after {
-  background-color: blueviolet;
+  background-color: rgb(15, 195, 240);
 }
 
 .dropdown_menu {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 100%;
   left: 0;
@@ -89,6 +92,7 @@ font-size: 16px;
   border-radius: 5px;
   z-index: 1000;
   min-width: 150px;
+  transition: opacity 0.5s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .dropdown_menu li {
@@ -96,24 +100,24 @@ font-size: 16px;
   white-space: nowrap;
 }
 
-
 .dropdown_menu li a {
   color: #ffffff;
   text-decoration: none;
   display: block;
-  transition: color 0.3s;
+  transition: color 0.3s, font-size 0.2s;
   font-size: 14px;
-  transition: 0.2s;
 }
 
 .dropdown_menu li a:hover {
-  color: blueviolet;
+  color: rgb(4, 103, 240);
   font-size: 16px;
 }
 
 .dropdown:hover .dropdown_menu {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
+
 
 .new_button {
   background-color: rgb(105, 104, 104);
@@ -127,10 +131,114 @@ font-size: 16px;
 }
 
 .new_button:hover {
-  background-color: blueviolet;
+  background-color: rgb(8, 181, 224);
   color: black;
   transform: scale(1.05);
 }
+
+/* From Uiverse.io by talhabangyal */ 
+.hamburger {
+display: none;
+cursor: pointer;
+margin-right: 15vw;
+}
+
+.hamburger input {
+display: none;
+}
+
+.hamburger svg {
+/* The size of the SVG defines the overall size */
+height: 3em;
+/* Define the transition for transforming the SVG */
+transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+fill: none;
+stroke: white;
+stroke-linecap: round;
+stroke-linejoin: round;
+stroke-width: 3;
+/* Define the transition for transforming the Stroke */
+transition:
+  stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+stroke-dasharray: 20 300;
+stroke-dashoffset: -32.42;
+}
+
+@keyframes moveText {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+    .moriah_section {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      z-index: -10;
+      animation: fadeIn 1.5s ease-in-out;
+    } 
+
+    .moriah_video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        opacity: 05;
+    }
+
+    .moriah_content {
+        position: absolute;
+        z-index: 2;
+        text-align: center;
+        color: white;
+    }
+    .moriah_title {
+        font-size: 4rem;
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+    }
+    .moriah_span {
+        font-size: 4rem;
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+    }
+    .btn_visit {
+      background-color: rgb(105, 104, 104);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn_visit:hover {
+        background-color: rgb(12, 170, 209); 
+        padding: 18px 45px;
+    }
 
 
 .main_about {
@@ -368,16 +476,7 @@ font-size: 16px;
   .leader-social-links a img:hover {
     transform: scale(1.2);
   }
-  
-  @media (max-width: 768px) {
-    .leader-profile {
-      flex-direction: column; /* Apila la imagen y el contenido en pantallas pequeñas */
-    }
-  
-    .leader-image img {
-      max-width: 100%;
-    }
-  }
+
 
 
   .ministeriosA {
@@ -505,24 +604,6 @@ font-size: 16px;
   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .ministerios {
     display: flex;
     flex-direction: column;
@@ -645,3 +726,160 @@ font-size: 16px;
     opacity: 0.9;
   }
   
+
+    
+  @media (max-width: 768px) {
+    .header {
+      padding:10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; 
+      text-align: center;
+      width: 100%;
+    }
+    
+    .header img {
+      max-height: 120px; 
+    }
+    
+    .header-content {
+      position: absolute;
+      top: 0;
+      margin-top: 10px;
+      margin-left: 75px;
+      left: 0;
+      width: 40%;
+      padding: 10px;
+      text-align: center;
+    }
+    .header-content h1, p{
+      text-align:flex-start;
+    }
+  
+    .nav_Moriah {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 50px;
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+      }
+      .nav_Moriah.open {
+        display: flex;
+      }
+      
+      .hamburger {
+        display: block;
+        transform: translatex(150px);
+      }
+      .nav_list {
+        flex-direction: column;
+      }
+      
+      .nav_list li {
+        text-align: center;
+        margin-top: -10px;
+      }
+      .dropdown_menu {
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+        
+      }
+      .dropdown_menu:before {
+        transition: 0.5s linear;
+      }
+      .dropdown:hover .dropdown_menu {
+        display: block;
+      }
+      .leader-profile {
+        flex-direction: column; /* Apila la imagen y el contenido en pantallas pequeñas */
+      }
+  
+      .leader-image img {
+        max-width: 100%;
+      }
+      .main_about {
+        background-color: red;
+        padding: 5px;
+      }
+    
+    .sectionOne {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+  }
+
+    .sectionOne h1{
+      font-size: 1rem;
+    }
+
+    .sectionOne h2{
+      font-size: 2rem;
+      padding-bottom: 55px;
+    }
+
+    .vision_section{
+      background-color: orange;
+      display: flex;
+      flex-direction: column;
+    }
+    .vision_text{
+      max-width: 90%;
+    }
+    .team-section{
+      background-color: blueviolet;
+      display: flex;
+      flex-direction: column;
+    }
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+    }
+    .leadership-section{
+      background-color: green;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .leader-details {
+      background-color: red;
+      min-width: 300px;
+      margin-left: -55px;
+    }
+
+
+    .ministeriosA{
+      background-color: yellow;
+    }
+    .ministerios {
+      flex-direction: column;
+      width: 100%;
+      background-color: blue;
+    }
+    .iglesia {
+      background-color: purple;
+      display: flex;
+      flex-direction: column;
+    }
+    .contenido-iglesia{
+      display: flex;
+      flex-direction: column;
+    }
+    .content_ministerios{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: red;
+    }
+
+    
+  }
+

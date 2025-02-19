@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
   padding: 0;
@@ -6,25 +6,28 @@
   box-sizing: border-box;
 }
 
+
 body {
-  font-family: "Red Hat Mono", serif;
-  font-weight: 700;
-  font-style: normal;
-  background-color: #f2f2f2;
-  color: #333;
-  line-height: 1;
+font-family: "Red Hat Mono", serif;
+font-style: normal;    
+width: 100%;
+flex-wrap: wrap;
+
 }
 
 .header {
+  padding: 10px;
   display: flex;
   position: static;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: #000000;
-  padding: 10px 20px;
-  animation: fadeInDown 1s ease-out;
+  width: 100%;
+  flex-wrap: wrap;
+
 }
+
 
 .header-content {
   display: flex;
@@ -37,48 +40,49 @@ body {
   width: 80px;
 }
 
-.header h1,
-.header p {
-  color: #ffffff;
-  margin: 0;
+.header h1, .header p {
+color: #ffffff;
+margin: 0;
 }
 
 .nav_Moriah {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+display: flex;
+align-items: center;
+gap: 50px;
 }
 
 .nav_list {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  list-style-type: none;
-  position: relative;
+display: flex;
+flex-direction: row;
+gap: 50px;
+list-style-type: none;
+position: relative;
 }
 
 .nav_list li {
-  position: relative;
-  animation: fadeInUp 1s ease-out;
+position: relative;
+animation: fadeInUp 1s ease-out;
+transform-origin: 0.5s inline;
 }
 
 .nav_list li a {
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s ease;
-  font-size: 16px;
+text-decoration: none;
+color: #ffffff;
+transition: color 0.3s ease;
+font-size: 16px;
 }
 
 .nav_list li a:hover {
-  color: blueviolet;
+  color: rgb(4, 103, 240);
 }
 
 .nav_list li:hover::after {
-  background-color: blueviolet;
+  background-color: rgb(15, 195, 240);
 }
 
 .dropdown_menu {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 100%;
   left: 0;
@@ -89,6 +93,7 @@ body {
   border-radius: 5px;
   z-index: 1000;
   min-width: 150px;
+  transition: opacity 0.5s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .dropdown_menu li {
@@ -100,19 +105,20 @@ body {
   color: #ffffff;
   text-decoration: none;
   display: block;
-  transition: color 0.3s;
+  transition: color 0.3s, font-size 0.2s;
   font-size: 14px;
-  transition: 0.2s;
 }
 
 .dropdown_menu li a:hover {
-  color: blueviolet;
+  color: rgb(4, 103, 240);
   font-size: 16px;
 }
 
 .dropdown:hover .dropdown_menu {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
+
 
 .new_button {
   background-color: rgb(105, 104, 104);
@@ -126,141 +132,188 @@ body {
 }
 
 .new_button:hover {
-  background-color: blueviolet;
+  background-color: rgb(8, 181, 224);
   color: black;
+  transform: scale(1.05);
 }
+
+/* From Uiverse.io by talhabangyal */ 
+.hamburger {
+display: none;
+cursor: pointer;
+margin-right: 15vw;
+}
+
+.hamburger input {
+display: none;
+}
+
+.hamburger svg {
+/* The size of the SVG defines the overall size */
+height: 3em;
+/* Define the transition for transforming the SVG */
+transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+fill: none;
+stroke: white;
+stroke-linecap: round;
+stroke-linejoin: round;
+stroke-width: 3;
+/* Define the transition for transforming the Stroke */
+transition:
+  stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+stroke-dasharray: 20 300;
+stroke-dashoffset: -32.42;
+}
+
+/* Animación para hacer un ligero movimiento */
+@keyframes moveText {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
 
 .container {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(to right, #959795, #f1f1f1);
-}
-
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 40%;
-  z-index: 1;
-  background-color: white;
+
 }
 
-.pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
+.ministerio {
+  display: flex;
   width: 100%;
-  height: 100%;
-  background-image: repeating-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.2) 10px,
-    transparent 10px,
-    transparent 20px
-  );
-  background-color: rgba(209, 209, 209, 0.553) !important;
+  background: rgb(144, 30, 30);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
-
-.content {
-  position: relative;
-  z-index: 2;
+.contenido {
+  flex: 1;
   padding: 40px;
-  text-align: center;
 }
 
-/* Title and Description */
-.title {
-  font-size: 2.5rem;
-  font-weight: bold;
+.contenido h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
   color: #333;
 }
 
-.highlight {
-  color: #4caf50;
+.contenido p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
 }
 
-.description {
-  margin: 20px auto;
-  font-size: 1rem;
-  line-height: 1.5;
-  max-width: 600px;
-  color: #555;
-}
 
-.container {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px;
-}
-
-.information {
+.containerinfo {
   display: flex;
-  background-color: red;
   flex-direction: column;
+  gap: 40px;
   width: 100%;
-  height: auto;
-}
-
-.information h2 {
-  color: white;
-  font-family: "Red Hat Mono", serif;
-  font-size: 3rem;
-}
-
-.integrantesIntersecion {
-  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 5vh;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.image {
+  width: 650px;
+  height: 270px;
+  background: repeating-linear-gradient(
+      45deg,
+      #ddd,
+      #ddd 10px,
+      #f5f5f5 10px,
+      #f5f5f5 20px
+  );
+  border-radius: 12px;
+}
+
+
+
+h2 {
+  font-size: 24px;
+  color: #222;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  margin: 0px 0 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.black {
+  background: black;
+  color: white;
+}
+
+.gray {
+  background: #ddd;
+  color: black;
+}
+
+.image {
+  background-color: red;
+}
+
+
+
+.contentform {
+  display: flex;
   flex-direction: column;
-  flex: 2;
-  background-color: blue;
-}
-
-.imgGrupo {
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  position: absolute;
-  background-color: green;
-  padding: 150px;
-}
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("https://via.placeholder.com/1500") center/cover no-repeat;
-  filter: blur(10px);
-}
-
-.pattern {
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
   color: #fff;
+  padding: 50px;
 }
 
 .title {
+  text-align: center;
+  margin-left: -220px;
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .highlight {
   color: #f0b90b;
 }
 
-.description {
-  font-size: 18px;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
 
 .form-container {
   background-color: rgba(0, 0, 0, 0.7);
@@ -314,3 +367,194 @@ button {
 button:hover {
   background-color: #e0a10a;
 }
+
+@media screen and (max-width:768px) {
+  .header {
+    height: 100px;
+  }
+
+  .header img {
+    max-height: 120px;
+    margin-left: -300px;
+    position: relative;
+  }
+
+  .header-content {
+    position: absolute;
+    top: 0;
+    margin-top: 1px;
+    transform: translate( 20px, -5px);
+    margin-left: 75px;
+    left: 0;
+    width: 40%;
+    padding: 0px;
+    text-align: center;
+  }
+  .header-content h1,
+  p {
+    text-align: flex-start;
+  }
+
+  .nav_Moriah {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 50px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  .nav_Moriah.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: 70vw;
+    margin-top: -80px;
+
+  }
+  .nav_list {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .nav_list li {
+    text-align: center;
+  }
+  .dropdown_menu {
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .dropdown_menu:before {
+    transition: 0.5s linear;
+  }
+  .dropdown:hover .dropdown_menu {
+    display: block;
+  }
+  .main_visitanos {
+    height: auto;
+    padding: 40px 20px;
+  }
+  .Moriahh {
+    position: absolute;
+    width: 350px;
+    margin-left: -63px;
+    margin-top: -20px;
+    /* background-color:red; */
+  }
+  .Domingos h1,
+  .miercoles h1,
+  .jueves h1 {
+    font-size: 1.8rem;
+  }
+  .Domingos p,
+  .miercoles p,
+  .jueves p {
+    font-size: 1.2rem;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  video {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    text-align: center;
+    width: 100%;
+  }
+  
+  .header img {
+    max-height: 120px; 
+  }
+  
+  .header-content {
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+    margin-left: 75px;
+    left: 0;
+    width: 40%;
+    padding: 0px;
+    text-align: center;
+  }
+  .header-content h1, p{
+    text-align:flex-start;
+  }
+
+  .nav_Moriah {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 50px;
+      transition: all 0.3s ease-in-out;
+      z-index: 1000;
+    }
+    .nav_Moriah.open {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      transform: translatex(40px);
+    }
+    .nav_list {
+      flex-direction: column;
+      gap: 50px;
+    }
+  
+    .nav_list li {
+      text-align: center;
+    }
+    .dropdown_menu {
+      position: relative;
+      background-color: transparent;
+      box-shadow: none;
+      
+    }
+    .dropdown_menu:before {
+      transition: 0.5s linear;
+    }
+    .dropdown:hover .dropdown_menu {
+      display: block;
+    }
+}
+
+
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav_Moriah {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .container {
+    padding: 20px;
+  }
+}
+
+
