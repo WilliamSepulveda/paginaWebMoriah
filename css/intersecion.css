@@ -198,7 +198,6 @@ stroke-dashoffset: -32.42;
 .ministerio {
   display: flex;
   width: 100%;
-  background: rgb(144, 30, 30);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -310,9 +309,7 @@ p {
   font-weight: bold;
 }
 
-.highlight {
-  color: #f0b90b;
-}
+
 
 
 .form-container {
@@ -440,38 +437,41 @@ button:hover {
     height: auto;
     padding: 40px 20px;
   }
-  .Moriahh {
-    position: absolute;
-    width: 350px;
-    margin-left: -63px;
-    margin-top: -20px;
-    /* background-color:red; */
-  }
-  .Domingos h1,
-  .miercoles h1,
-  .jueves h1 {
-    font-size: 1.8rem;
-  }
-  .Domingos p,
-  .miercoles p,
-  .jueves p {
-    font-size: 1.2rem;
-  }
-  .footer {
+  
+  
+  .card{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .image{
+    width: 90%;
+    
+  }
+  .contentform  h1{
+    color: red;
+    width: 100%;
+    padding-bottom: 5vh;
+  }
+  .title {
+    display: flex;
+    margin-left: 2vw;
     text-align: center;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
   }
-  video {
-    width: 400px;
-    height: auto;
-    border-radius: 10px;
+  .form-container{
+    width: 100%;
+    min-width: 280px;
+    margin: 0 auto;
+    margin-left: -8vw;
+  }
 
-  }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 568px) {
   .header {
     padding:10px;
     display: flex;
@@ -483,7 +483,9 @@ button:hover {
   }
   
   .header img {
-    max-height: 120px; 
+    width: 70px;
+    transform: translateX(20px);
+    height: auto; 
   }
   
   .header-content {
@@ -539,6 +541,12 @@ button:hover {
     }
     .dropdown:hover .dropdown_menu {
       display: block;
+    }
+    .form-container{
+      width: 100%;
+      min-width: 280px;
+      margin: 0 auto;
+      margin-left: -15vw;
     }
 }
 
