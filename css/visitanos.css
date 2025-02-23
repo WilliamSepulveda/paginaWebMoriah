@@ -433,7 +433,8 @@ h2 {
     text-align: center;
   }
   .main_visitanos {
-    background-size: cover; /* Asegura que la imagen se ajuste */
+    background-size: cover; 
+    background: url("https://storage2.snappages.site/RHKN2B/assets/images/6655824_2048x1365_2500.jpg")cover;
     /* background-attachment: scroll; Desactiva el parallax en móviles */
   }
   
