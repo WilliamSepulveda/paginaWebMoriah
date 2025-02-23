@@ -225,21 +225,7 @@ stroke-dashoffset: -32.42;
         margin-bottom: 10px;
         color: rgb(255, 255, 255);
     }
-    .btn_visit {
-      background-color: rgb(105, 104, 104);
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 14px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .btn_visit:hover {
-        background-color: rgb(12, 170, 209); 
-        padding: 18px 45px;
-    }
+   
 
 
     .container_main {
@@ -295,7 +281,7 @@ stroke-dashoffset: -32.42;
         --font-size: 16px;
         --font-weight: 600;
         --font-family: Menlo,Roboto Mono,monospace;
-        /* 👆 this field should not be empty */
+        border-radius: 15px;
       }
       
       /* button settings 👆 */
@@ -514,7 +500,7 @@ stroke-dashoffset: -32.42;
         color: #adadad;
     } 
     .about_me_content h2 {
-      margin-top:9vh;
+        margin-top:15vh;
         font-size: 1.8rem;
         margin-bottom: 15px;
         color: #ffffff;
@@ -531,7 +517,7 @@ stroke-dashoffset: -32.42;
       position:absolute;
       width: 400px;
       margin-left:-180px;
-      margin-top: -15px;
+      margin-top: -10px;
       /* background-color:red; */
     }
 
