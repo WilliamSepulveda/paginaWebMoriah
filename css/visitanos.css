@@ -181,14 +181,12 @@ body {
 .main_visitanos {
   position: relative;
   width: 100%;
-  height: 200vh; /* Pantalla completa */
-  background: url("https://storage2.snappages.site/RHKN2B/assets/images/6655824_2048x1365_2500.jpg")
-    no-repeat center center/cover;
+  height: auto; /* Pantalla completa */
+  background: url("https://storage2.snappages.site/RHKN2B/assets/images/6655824_2048x1365_2500.jpg") no-repeat center center/cover;
   background-attachment: fixed; /* Efecto Parallax */
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 /* Contenedor de texto con efecto flotante */
@@ -435,16 +433,16 @@ h2 {
     text-align: center;
   }
   .main_visitanos {
-  width: 100%;
-  height: auto;
-  
+    background-size: cover; /* Asegura que la imagen se ajuste */
+    /* background-attachment: scroll; Desactiva el parallax en móviles */
   }
-  video {
+  
+  /* video {
     width: 400px;
     height: auto;
     border-radius: 10px;
 
-  }
+  } */
 }
 
 @media screen and (max-width: 480px) {
