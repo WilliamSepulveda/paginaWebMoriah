@@ -434,6 +434,11 @@ h2 {
     align-items: center;
     text-align: center;
   }
+  .main_visitanos {
+  width: 100%;
+  height: auto;
+  
+  }
   video {
     width: 400px;
     height: auto;
