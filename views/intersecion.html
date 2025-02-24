@@ -68,24 +68,24 @@
         <div class="card">
           <img src="../storage/pexelsAlabanza.jpg" class="image">
             <div class="content">
-                <h2>Ministerio de interseción</h2>
+                <h2>Líder de intersecion</h2>
+                <h3>Name: </h3>
                 <p>El Departamento de Intercesión es una base esencial <br> en nuestro templo, donde nos congregamos en oración para suplicar <br> 
                   por las urgencias de nuestra comunidad, nuestros hogares, guías y el planeta. <br>
                    Creemos en el poder de la oración como medio de cambio y reconstrucción.</p>
                 <div class="buttons">
-                    <button class="btn black">Get Started</button>
-                    <button class="btn gray">Learn More</button>
+                    <button class="btn black">Más información</button>
+                    <button class="btn gray">Versículo de regalo</button>
                 </div>
             </div>
         </div>
 
         <div class="card">
             <div class="content">
-                <h2>Start with Site Templates</h2>
+                <h2>Nuestro objetivo como ministerio</h2>
                 <p>Browse dozens of templates. Click, duplicate, customize.</p>
                 <div class="buttons">
-                    <button class="btn black">Get Started</button>
-                    <button class="btn gray">Learn More</button>
+                    <button class="btn black">Cónoce más nuestro objetivo</button>
                 </div>
             </div>
             <img src="../storage/pexelsAlabanza.jpg" class="image">
@@ -93,7 +93,7 @@
     </div>
       <section class="contentform">
         <h1 class="title">
-          ¿Necesitas <span class="highlight">Oración?</span>
+          ¿Necesitas <span class="highlight">...Oración?</span>
         </h1>
         <p class="description">
           Ya sea que estés atravesando una etapa difícil en tu vida, tengas
@@ -101,17 +101,41 @@
           para orar por ti. Completa la siguiente información para que podamos
           brindarte el mejor servicio.
         </p>
+          
+      </section>
+      <section class="formulario">
+        <div class="video-background">
+          <video autoplay loop muted playsinline class="video-bg">
+            <source src="../storage/Lines-moving-right-[remix].mp4" type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </div>
+      
         <div class="form-container">
-          <h2 class="form-title">Solicitar oración</h2>
-          <form id="whatsappForm" onsubmit="enviarWhatsapp(event)">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required />
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required />
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-            <button type="submit">Enviar a WhatsApp</button>
-          </form>
+          <div class="form-card1">
+            <div class="form-card2">
+              <form class="form" id="whatsappForm" onsubmit="enviarWhatsapp(event)">
+                <p class="form-heading">Solicitar Oración</p>
+      
+                <div class="form-field">
+                  <label for="nombre">Nombre:</label>
+                  <input required id="nombre" name="nombre" placeholder="Escribe tu nombre completo" class="input-field" type="text" />
+                </div>
+      
+                <div class="form-field">
+                  <label for="telefono">Teléfono:</label>
+                  <input required id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" class="input-field" type="tel" />
+                </div>
+      
+                <div class="form-field">
+                  <label for="mensaje">Mensaje:</label>
+                  <textarea required id="mensaje" name="mensaje" placeholder="Escribe por qué quieres que oremos" cols="30" rows="3" class="input-field"></textarea>
+                </div>
+      
+                <button class="sendMessage-btn" type="submit">Enviar a WhatsApp</button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -132,7 +156,7 @@
         }
 
         // Crear el mensaje a enviar
-        const mensajeCompleto = `Hola, mi nombre es ${nombre}. Te escribo desde el número ${telefono}. Mensaje: ${mensaje}`;
+        const mensajeCompleto = `🙏 ¡Hola! Soy ${nombre}. Mi número es (${telefono}) y quiero que me ayudes a orar por algo importante: "${mensaje}". ¡Tu oración es muy valiosa para mí! 💙`;
 
         // Crear el enlace para abrir WhatsApp con el mensaje predefinido
         const numeroWhatsApp = "+573134024782"; // Asegúrate de que el número esté bien formateado (con el código de país)
