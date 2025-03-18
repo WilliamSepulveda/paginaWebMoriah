@@ -38,8 +38,8 @@
                     <a href="#">Ministerios</a>
                     <ul class="dropdown_menu">
                         <li><a href="./views/jovenes.html">Jóvenes</a></li>
-                        <li><a href="#">Alabanza</a></li>
-                        <li><a href="#">Intercesión</a></li>
+                        <li><a href="../views/alabanza.html">Alabanza</a></li>
+                        <li><a href="../views/intersecion.html">Intercesión</a></li>
                         <li><a href="#">Diáconos</a></li>
                         <li><a href="#">Infantil</a></li>
                     </ul>
@@ -53,18 +53,36 @@
         <div class="overlay" id="menu-overlay"></div>
     </header>
     <!-- main -->
-    <section class="main_section">
-        <div class="banner">
-            <div class="banner-content">
-              <h1>Ministerio de Alabanza</h1>
-              <p>Adorando con pasión y excelencia</p>
-              <div class="music-icons">
-                <div class="icon"><img src="https://via.placeholder.com/150" alt="Micrófono"></div>
-                <div class="icon"><img src="https://via.placeholder.com/150" alt="Guitarra"></div>
-                <div class="icon"><img src="https://via.placeholder.com/150" alt="Piano"></div>
-              </div>
-            </div>
-          </div>
-    </section>
+<section class="cloneable">
+    <div class="looping-words">
+      <div class="looping-words__containers">
+        <ul data-looping-words-list="" class="looping-words__list">
+          <li class="looping-words__list">
+            <p class="looping-words__p">Adulam</p>
+          </li>
+          <li class="looping-words__list">
+            <p class="looping-words__p">Refugio</p>
+          </li>
+          <li class="looping-words__list">
+            <p class="looping-words__p">Perdón</p>
+          </li>
+          <li class="looping-words__list">
+            <p class="looping-words__p">Jóvenes</p>
+          </li>
+          <li class="looping-words__list">
+            <p class="looping-words__p">Ministerio</p>
+          </li>
+        </ul>
+      </div>
+      <div class="looping-words__fade"></div>
+      <div data-looping-words-selector="" class="looping-words__selector">
+        <div class="looping-words__edge"></div>
+        <div class="looping-words__edge is--2"></div>
+        <div class="looping-words__edge is--3"></div>
+        <div class="looping-words__edge is--4"></div>
+      </div>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </body>
 </html>
