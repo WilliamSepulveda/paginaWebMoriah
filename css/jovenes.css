@@ -7,7 +7,13 @@
   box-sizing: border-box;
 }
 
-
+body {
+  font-family: "Red Hat Mono", serif;
+  font-style: normal;
+  background-color: var(--color-neutral-300);
+  color: var(--color-dark);
+  font-size: var(--size-font);
+}
 
 .header {
   padding: 10px;
@@ -266,13 +272,7 @@ stroke-dashoffset: -32.42;
 }
 
 
-body {
-  font-family: "Red Hat Mono", serif;
-  font-style: normal;
-  background-color: var(--color-neutral-300);
-  color: var(--color-dark);
-  font-size: var(--size-font);
-}
+
 
 .cloneable {
   padding: var(--container-padding);
@@ -386,4 +386,23 @@ body {
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+
+@media (max-width: 768px) {
+  .looping-words {
+    font-size: clamp(3rem, 7vw, 3rem);
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+  }
+
+  .looping-words__fade.is--radial {
+    width: 160%;
+    left: -30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .looping-words {
+    font-size: clamp(7rem, 6vw, 2.5rem);
+  }
 }
