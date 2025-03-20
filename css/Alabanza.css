@@ -274,6 +274,7 @@ stroke-dashoffset: -32.42;
     position: relative;
     height: 100%;
     font-family: "Montserrat", serif;
+    z-index: -1º;
   }
   
   .hero {
