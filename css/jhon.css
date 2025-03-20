@@ -263,7 +263,23 @@ stroke-dashoffset: -32.42;
     }
     
 }
+button {
+  display: flex;
+  left: 0;
+  top: 0;
+  padding: 5px 35px;
+  margin: 10px 10px;
+  background-color: #750658;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} 
 
+button:hover {
+  color: black;
+  background-color: #ee109c;
+} 
 
 /* banner de presentación */
   #app {
