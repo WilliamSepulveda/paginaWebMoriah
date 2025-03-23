@@ -30,7 +30,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #000000;
+  background-color: #4c0362;
   width: 100%;
   flex-wrap: wrap;
   z-index: 10;
@@ -462,7 +462,7 @@ stroke-dashoffset: -32.42;
 .btn-go-shopping {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #ee5c47;
+  background-color: #49326F;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -472,7 +472,7 @@ stroke-dashoffset: -32.42;
 }
 
 .btn-go-shopping:hover {
-  background-color: #d44835;
+  background-color: #35ccd4;
 }
 
 .image-content {
