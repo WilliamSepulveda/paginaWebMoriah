@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
 // carrusel de palabras
 // ------- Osmo [https://osmo.supply/] ------- //
 
@@ -69,3 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
       .to({}, { duration: 2 })
       .repeat(-1);
   });
+
+
+  

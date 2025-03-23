@@ -185,23 +185,28 @@ font-family: "Red Hat Mono", serif;
     50% { transform: translateY(-5px); }
     100% { transform: translateY(0); }
   }
-  
-button {
-  display: flex;
-  left: 0;
-  top: 0;
-  padding: 35px 25px;
-  background-color: #750658;
-  color: white;
-  border: none;
-  border-radius: 100%;
-  cursor: pointer;
-} 
 
-button:hover {
-  color: black;
-  background-color: #ee109c;
-}
+  .botonretroceso{
+    padding: 20px;
+
+  }
+  .botonreturn {
+    display: inline-block;
+    background-color: #6c5ce7;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .botonreturn:hover {
+    background-color: #4d971f;
+    
+  }
+  
 
 /* seccion de dayana */
 .profileDayana {
@@ -209,14 +214,14 @@ button:hover {
     height: 100vh;
     z-index: -1;
     position: relative;
+    padding: 50px 50px ;
   }
   
   .new-arrivals-container {
     z-index: -10;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
+    justify-content: center;
     margin: auto;
     flex-wrap: wrap;
   }
