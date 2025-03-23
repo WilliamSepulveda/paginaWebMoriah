@@ -332,11 +332,11 @@ h2 {
 
 @media screen and (max-width:768px) {
   .header {
-    padding: 20px;
+    padding:10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
     text-align: center;
     width: 100%;
   }
@@ -382,7 +382,7 @@ h2 {
   }
   .nav_list {
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
   }
 
   .nav_list li {

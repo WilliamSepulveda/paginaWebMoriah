@@ -965,7 +965,7 @@ stroke-dashoffset: -32.42;
           }
           .nav_list {
             flex-direction: column;
-            gap: 50px;
+            gap: 20px;
           }
         
           .nav_list li {

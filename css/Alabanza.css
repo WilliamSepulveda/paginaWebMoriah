@@ -233,7 +233,7 @@ stroke-dashoffset: -32.42;
       top: 100px;
       left: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(132, 4, 187, 0.9);
       padding: 50px;
       transition: all 0.3s ease-in-out;
       z-index: 1000;
@@ -250,9 +250,10 @@ stroke-dashoffset: -32.42;
       flex-direction: column;
       gap: 50px;
     }
-  
-    .nav_list li {
+    
+    .nav_list li, a {
       text-align: center;
+      font-size: 1rem;
     }
     .dropdown_menu {
       position: relative;
@@ -262,6 +263,7 @@ stroke-dashoffset: -32.42;
     }
     .dropdown_menu:before {
       transition: 0.5s linear;
+      color: #000000;
     }
     .dropdown:hover .dropdown_menu {
       display: block;
