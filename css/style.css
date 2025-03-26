@@ -695,7 +695,68 @@ stroke-dashoffset: -32.42;
           transform: translateY(0);
       }
 
-
+      .scroll-animations-example {
+        overflow: hidden; /* Asegura que el scroll solo ocurre dentro de este contenedor */
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .scrollsection {
+        display: flex;
+        flex-direction: row;
+        width: max-content; /* Permite que los elementos se expandan más allá del viewport */
+    }
+    
+    .item {
+        display: inline-block;
+        position: absolute;
+        margin: 0 2vh;
+    }
+    
+    .image {
+        height: 100%;
+        width: 100%;
+        transition: all 1s ease;
+    }
+    
+    
+    .fake-ui {
+        font-size: 0;
+        
+        > .logo {
+            position: fixed;
+            top: 2vh;
+            left: 2vh;
+            height: 3vh;
+            width: 2.5vh;
+            border: solid 1vh #999;
+        }
+    
+        > .nav {
+            position: fixed;
+            top: 2vh;
+            right: 2vh;
+        }
+    
+        > .nav > .item {
+            background: #999;
+            display: inline-block;
+            height: 2vh;
+            width: 10vh;
+            margin-left: 2vh;
+        }
+    
+        > .footer {
+            position: fixed;
+            bottom: 3vh;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2vh;
+            width: 40vh;
+            background: #999;
+        }
+    }
       
       .footer {
         background-color: #f7f7f7;

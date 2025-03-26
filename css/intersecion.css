@@ -12,6 +12,7 @@ font-family: "Red Hat Mono", serif;
 font-style: normal;    
 width: 100%;
 flex-wrap: wrap;
+background-color: #000;
 
 }
 
@@ -195,27 +196,74 @@ stroke-dashoffset: -32.42;
 
 }
 
-.ministerio {
+/* Asegura que la sección ocupe todo el ancho de la pantalla */
+.education-section {
   display: flex;
   width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  min-height: 80vh; /* Altura mínima para un mejor diseño */
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  box-sizing: border-box;
 }
-.contenido {
-  flex: 1;
+
+/* Ajusta el ancho de cada parte */
+.text-content, .image-content {
+  flex: 1; /* Ocupa el 50% del ancho */
   padding: 20px;
 }
 
-.contenido h1 {
-  font-size: 28px;
+/* Ajustes del texto */
+.text-content h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: #f5f5f5;
 }
 
-.contenido p {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.6;
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+/* Botón */
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Imagen y diseño responsivo */
+.image-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-content img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Círculo decorativo */
+.circle {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 200, 0, 0.5);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 
@@ -227,6 +275,7 @@ stroke-dashoffset: -32.42;
   justify-content: center;
   align-items: center;
   margin-top: 5vh;
+  padding: 20px;
 }
 
 .card {
@@ -235,29 +284,31 @@ stroke-dashoffset: -32.42;
   gap: 20px;
 }
 
-.image {
-  width: 650px;
-  height: 270px;
-  background: repeating-linear-gradient(
-      45deg,
-      #ddd,
-      #ddd 10px,
-      #f5f5f5 10px,
-      #f5f5f5 20px
-  );
-  border-radius: 12px;
+.imagemujer {
+  margin-top: 5vh;
+  width: 410px;
+  height: auto;
+  box-shadow: 2px 2px 2px 2px #007bff;
+  border-radius: 10%;
 }
 
 
+.image {
+  margin-top: 5vh;
+  width: 410px;
+  height: auto;
+  box-shadow: 2px 2px 2px 2px #007bff;
+  border-radius: 10%;
+}
 
 h2 {
-  font-size: 24px;
-  color: #222;
+  font-size: 30px;
+  color: #ffffff;
 }
 
 p {
   font-size: 16px;
-  color: #666;
+  color: #ffffff;
   margin: 0px 0 20px;
 }
 
@@ -293,7 +344,8 @@ p {
   align-items: center;
   width: 100%;
   color: #fff;
-  padding: 50px;
+  padding: 0 150px;
+  margin-top: 15vh;
 }
 
 .title {
@@ -340,7 +392,7 @@ p {
 }
 
 button {
-  background-color: #25D366;
+  background-color: #25cad3;
   color: #fff;
   font-size: 18px;
   padding: 10px 20px;
@@ -351,7 +403,7 @@ button {
 }
 
 button:hover {
-  background-color: #25D366;
+  background-color: #25cad3;
 }
 
 #whatsappForm {
@@ -368,7 +420,7 @@ button:hover {
 .form-heading {
   text-align: center;
   margin-bottom: 1.5em;
-  color: #25D366;
+  color: #25cad3;
   font-size: 1.5em;
 }
 
@@ -398,20 +450,20 @@ button:hover {
   border-radius: 10px;
   border: none;
   background-color: transparent;
-  color: #25D366;
+  color: #25cad3;
   font-weight: bold;
-  outline: 1px solid #25D366;
+  outline: 1px solid #25cad3;
   transition: all 0.3s ease-in-out;
 }
 
 .sendMessage-btn:hover {
-  background-color: #25D366;
+  background-color: #25cad3;
   color: #000;
   box-shadow: inset 2px 5px 10px rgb(1, 255, 196);
 }
 
 .form-card1 {
-  background-image: linear-gradient(163deg, #25D366 0%, #25D366 100%);
+  background-image: linear-gradient(163deg, #25cad3 0%, #25cad3 100%);
   border-radius: 22px;
   transition: all 0.3s;
 }
@@ -428,6 +480,26 @@ button:hover {
 .form-card2:hover {
   transform: scale(0.98);
   border-radius: 20px;
+}
+#toTopBtn {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;  
+  z-index: 1000; 
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+  display: none; /* Oculto por defecto */
+}
+
+#scrollTopBtn:hover {
+  background-color: #0056b3;
 }
 
 

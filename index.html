@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script type="module" src="js/main.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn4y8-a_y9LRlWt640fqrlF2eSrkJIdKE&callback=initMap"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <title>Moriah</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Estilos -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+        <!-- Google Maps (Cuidado con la API Key) -->
+        <!-- Usa variables de entorno o config.js para ocultar la clave -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"></script>
+    
+        <!-- Script principal (debe ir al final para que los demás scripts ya estén cargados) -->
+        <script type="module" src="js/main.js"></script>
+    
+        <title>Moriah</title>
+    </head>
+    
 <body>
     <script>
         AOS.init({
@@ -104,7 +114,14 @@
             </div>
         </div>
     </main>
-    
+
+
+
+
+
+
+
+    <!-- seccion de footer -->
     <footer class="footer2" data-aos="fade-up">
         <h1>Visítanos</h1>
         <div class="content_footer">
@@ -168,7 +185,7 @@
       <div class="footer-links">
         <a href="#">Privacy & Policy</a>
         <a href="#">Terms</a>
-        <a href="#">About us</a>
+        <a href="./views/about.html">About us</a>
         <a href="#">FAQ</a>
       </div>
     </div>

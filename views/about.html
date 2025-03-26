@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="../js/about.js"></script>
     <title>About</title>
 </head>
 <body>
- 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1500, // Duración de la animación en milisegundos
+      once: false, // La animación solo ocurre una vez
+    });
+  </script>
+  
   <header class="header" data-aos="fade-down">
     <a href="../index.html">
-        <img src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png" alt="Logo Moriah">
+        <img src="../storage/262392962_111431158039475_4524837832433151331_n-Photoroom.png" alt="Logo Moriah">
     </a>
     
     <div class="header-content">
@@ -59,8 +65,10 @@
     <!-- Overlay para cerrar el menú -->
     <div class="overlay" id="menu-overlay"></div>
   </header>
+
+
+  <!-- javascript -->
   <script>
-    
     document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
   const navMoriah = document.getElementById('navMoriah');
@@ -85,15 +93,16 @@
   overlay.addEventListener('click', toggleMenu);
 });
   </script>
-    <main class="main_about">
-      <section class="sectionOne">
+
+    <main class="main_about" data-aos="fade-up">
+      <section class="sectionOne" data-aos="fade-up">
         <div class="scroll-container">
             <video autoplay loop muted playsinline>
-                <source src="../storage/[Apple-Event]-Summary-Slide-[remix].mp4" type="video/mp4">
+                <source src="../storage/[Apple-Event]-Summary-Slide-[remix] (1).mp4" type="video/mp4">
             </video>
         </div>
     </section>
-        <section class="vision_section">
+        <section class="vision_section" data-aos="fade-left">
             <div class="vision_text">
                 <h3>Nuestra visión</h3>
                 <h2>Deseamos ser una iglesia de Jesús.</h2>
@@ -105,7 +114,7 @@
             </div>
         </section>
 
-        <section class="team-section">
+        <section class="team-section" data-aos="zoom-right">
             <h2>Nuestro liderazgo</h2>
             <h1>Conozca al equipo</h1>
             <div class="team-member">

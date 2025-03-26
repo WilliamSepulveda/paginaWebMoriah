@@ -4,11 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/intersecion.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="module" src="../js/intersecion.js"></script>
     <title>interseción</title>
   </head>
   <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Duración de la animación en milisegundos
+    once: true, // La animación solo ocurre una vez
+  });
+</script>
+
     <header class="header" data-aos="fade-down">
       <a href="../index.html">
           <img src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png" alt="Logo Moriah">
@@ -54,91 +63,86 @@
       <div class="overlay" id="menu-overlay"></div>
   </header>
 
-    <div class="container">
-
-      <section class="ministerio">
-        <div class="contenido">
-            <h1>Ministerio de Intercesión</h1>
-            <p>El Ministerio de Intercesión es un pilar fundamental en nuestra iglesia, donde nos unimos en oración para clamar por las necesidades de nuestra comunidad, familias, líderes y el mundo. Creemos en el poder de la oración como herramienta de transformación y restauración.</p>
-        </div>
-        <div class="fondo">
-        </div>
+  <div class="container">
+    <section class="education-section">
+      <div class="text-content" data-aos="fade-left">
+          <h1>Ministerio de Intercesión</h1>
+          <p>El Ministerio de Intercesión es un pilar fundamental en nuestra iglesia, donde nos unimos en oración...</p>
+          <button class="btn">View Details</button>
+      </div>
+      <div class="image-content" data-aos="fade-right">
+          <div class="circle"></div>
+          <div class="card blue">
+              <img src="../storage/stop-racism-poster-template_23-2148578750.jpg" alt="Estudiante 1">
+          </div>
+      </div>
     </section>
-
-     <div class="containerinfo">
-        <div class="card">
-          <img src="../storage/pexelsAlabanza.jpg" class="image">
-            <div class="content">
-                <h2>Líder de intersecion</h2>
-                <h3>Name: </h3>
-                <p>El Departamento de Intercesión es una base esencial <br> en nuestro templo, donde nos congregamos en oración para suplicar <br> 
-                  por las urgencias de nuestra comunidad, nuestros hogares, guías y el planeta. <br>
-                   Creemos en el poder de la oración como medio de cambio y reconstrucción.</p>
-                <div class="buttons">
-                    <button class="btn black">Más información</button>
-                    <button class="btn gray">Versículo de regalo</button>
-                </div>
+  
+    <div class="containerinfo">
+      <div class="card" data-aos="fade-up">
+        <img src="../storage/pexelsAlabanza.jpg" class="image">
+        <div class="content">
+            <h2>Líder de intercesión</h2>
+            <h3>Name: </h3>
+            <p>El Departamento de Intercesión es una base esencial...</p>
+            <div class="buttons">
+                <button class="btn black">Más información</button>
+                <button class="btn gray">Versículo de regalo</button>
             </div>
         </div>
-
-        <div class="card">
-            <div class="content">
-                <h2>Nuestro objetivo como ministerio</h2>
-                <p>Browse dozens of templates. Click, duplicate, customize.</p>
-                <div class="buttons">
-                    <button class="btn black">Cónoce más nuestro objetivo</button>
-                </div>
+      </div>
+  
+      <div class="card" data-aos="fade-up">
+        <div class="content">
+            <h2>Nuestro objetivo como ministerio</h2>
+            <p>Browse dozens of templates...</p>
+            <div class="buttons">
+                <button class="btn black">Conoce más nuestro objetivo</button>
             </div>
-            <img src="../storage/pexelsAlabanza.jpg" class="image">
         </div>
+        <img src="../storage/mujer-plano-medio-orando-iglesia.png" class="imagemujer">
+      </div>
     </div>
-      <section class="contentform">
-        <h1 class="title">
-          ¿Necesitas <span class="highlight">...Oración?</span>
-        </h1>
-        <p class="description">
-          Ya sea que estés atravesando una etapa difícil en tu vida, tengas
-          dudas espirituales o necesites aliento, el equipo de oración está aquí
-          para orar por ti. Completa la siguiente información para que podamos
-          brindarte el mejor servicio.
-        </p>
-          
-      </section>
-      <section class="formulario">
-        <div class="video-background">
-          <video autoplay loop muted playsinline class="video-bg">
-            <source src="../storage/Lines-moving-right-[remix].mp4" type="video/mp4" />
-            Tu navegador no soporta el elemento de video.
-          </video>
-        </div>
-      
-        <div class="form-container">
-          <div class="form-card1">
-            <div class="form-card2">
-              <form class="form" id="whatsappForm" onsubmit="enviarWhatsapp(event)">
-                <p class="form-heading">Solicitar Oración</p>
-      
-                <div class="form-field">
-                  <label for="nombre">Nombre:</label>
-                  <input required id="nombre" name="nombre" placeholder="Escribe tu nombre completo" class="input-field" type="text" />
-                </div>
-      
-                <div class="form-field">
-                  <label for="telefono">Teléfono:</label>
-                  <input required id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" class="input-field" type="tel" />
-                </div>
-      
-                <div class="form-field">
-                  <label for="mensaje">Mensaje:</label>
-                  <textarea required id="mensaje" name="mensaje" placeholder="Escribe por qué quieres que oremos" cols="30" rows="3" class="input-field"></textarea>
-                </div>
-      
-                <button class="sendMessage-btn" type="submit">Enviar a WhatsApp</button>
-              </form>
-            </div>
+  
+    <section class="contentform" data-aos="fade-up">
+      <h1 class="title">
+        ¿Necesitas <span class="highlight">...Oración?</span>
+      </h1>
+      <p class="description">
+        Ya sea que estés atravesando una etapa difícil en tu vida, tengas dudas espirituales o necesites aliento...
+      </p>
+    </section>
+  
+    <section class="formulario" data-aos="fade-up">
+      <div class="form-container">
+        <div class="form-card1">
+          <div class="form-card2">
+            <form class="form" id="whatsappForm" onsubmit="enviarWhatsapp(event)">
+              <p class="form-heading">Solicitar Oración</p>
+  
+              <div class="form-field">
+                <label for="nombre">Nombre:</label>
+                <input required id="nombre" name="nombre" placeholder="Escribe tu nombre completo" class="input-field" type="text" />
+              </div>
+  
+              <div class="form-field">
+                <label for="telefono">Teléfono:</label>
+                <input required id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" class="input-field" type="tel" />
+              </div>
+  
+              <div class="form-field">
+                <label for="mensaje">Mensaje:</label>
+                <textarea required id="mensaje" name="mensaje" placeholder="Escribe por qué quieres que oremos" cols="30" rows="3" class="input-field"></textarea>
+              </div>
+  
+              <button class="sendMessage-btn" type="submit">Enviar a WhatsApp</button>
+            </form>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+  </div>
+  
       
     </div>
     <footer>
@@ -174,4 +178,5 @@
       }
     </script>
   </body>
+
 </html>

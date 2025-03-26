@@ -72,3 +72,7 @@ window.onscroll = () => {
 btn.onclick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
+
+
+
+  
