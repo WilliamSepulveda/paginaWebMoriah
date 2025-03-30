@@ -770,7 +770,8 @@ stroke-dashoffset: -32.42;
       }
 
 
-      .content_footer {
+      .content_mapa {
+        padding: 50px;
         background-color: rgba(140, 139, 139, 0.711);
         display: flex;
         align-items: center;

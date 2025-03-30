@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/soy_nuevo.css">
+    <script type="module" src="../js/soy_nuevo.js"></script>
+    <title>Banner Rotativo</title>
+</head>
+<body>
+    <button class="index-button" onclick="window.location.href='/index.html';">Ir a Inicio</button>
+    <button class="floating-home-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+
+    <div class="banner">
+        <div class="images active"><img src="../storage/mujer-plano-medio-orando-iglesia.png" alt="1"></div>
+        <div class="images"><img src="../storage/moriah.png" alt="2"></div>
+        <div class="images"><img src="../storage/moriah.png" alt="3"></div>
+        <div class="images"><img src="../storage/moriah.png" alt="4"></div>
+        <div class="controls">
+            <button class="botonizquierda" onclick="prevSlide()">❮</button>
+            <button class="botonderecha" onclick="nextSlide()">❯</button>
+        </div>
+    </div>
+
+    <section class="section-container">
+        <div class="text-content">
+            <h2>Nos alegra que estés aquí.</h2>
+            <p>En la Iglesia cristiana cuadrangular MORIAH, deseamos ser una Iglesia de Cristo. Lo vivimos en nuestras cuatro palabras clave de visión: Encuentro, Discipulado, Servicio e Impacto...</p>
+            <a href="#" class="button">Haznos saber que vienes</a>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="preguntas_frecuentes">
+        <h1>PREGUNTAS FRECUENTES</h1>
+        <div class="underline"></div>
+        <div class="accordion-container">
+            <div>
+                <div class="accordion" onclick="toggleAccordion(this)">¿Qué me pongo?</div>
+                <div class="accordion-content">Puedes vestir de manera cómoda y acorde a tu estilo.</div>
+            </div>
+            <div>
+                <div class="accordion" onclick="toggleAccordion(this)">¿Qué pasa con mi hijo de secundaria/preparatoria?</div>
+                <div class="accordion-content">Contamos con programas especiales para jóvenes de secundaria y preparatoria.</div>
+            </div>
+            <div>
+                <div class="accordion" onclick="toggleAccordion(this)">¿Cómo es un servicio típico?</div>
+                <div class="accordion-content">Incluye música, oración y enseñanza basada en la Biblia.</div>
+            </div>
+            <div>
+                <div class="accordion" onclick="toggleAccordion(this)">¿Tienes café?</div>
+                <div class="accordion-content">Sí, ofrecemos café gratuito antes y después del servicio.</div>
+            </div>
+            <div>
+                <div class="accordion" onclick="toggleAccordion(this)">¿Qué tienes para mis hijos?</div>
+                <div class="accordion-content">Ofrecemos actividades y clases para niños de todas las edades.</div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function toggleAccordion(element) {
+            element.classList.toggle("active");
+            let content = element.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        function volverAlInicio() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- Sección Contáctanos -->
+    <section class="contenedor-moriah">
+        <div class="imagen-moriah">
+            <img src="../storage/ilustracion-concepto-lealtad-marca_114360-15542-Photoroom.png" alt="Bienvenida">
+        </div>
+        <div class="formulario-moriah">
+            <h2>¡Estamos deseando conocerte!</h2>
+            <p>Avísanos si vienes y te prepararemos un regalo especial.</p>
+            <form id="formularioVisitaMoriah">
+                <div class="grupo-inputs-moriah">
+                    <input type="text" id="nombreMoriah" placeholder="Nombre" required>
+                    <input type="text" id="apellidoMoriah" placeholder="Apellido" required>
+                </div>
+                <input type="email" id="emailMoriah" placeholder="Correo electrónico" required>
+                <input type="date" id="fechaVisitaMoriah" required>
+                <input type="text" id="acompananteMoriah" placeholder="¿Alguien vendrá contigo?">
+                <button class="botonwhatsapp" type="submit">Enviar por WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="containerbiblia">
+        <section class="versiculo">
+            <h2>Versículo del Día</h2>
+            <p id="versiculo-texto">Cargando versículo...</p>
+            <p id="versiculo-referencia"></p>
+            <button class="verMas" id="ver-mas">Ver más</button>
+        </section>
+
+        <section class="conoce-biblia">
+            <h2>Conoce la Biblia</h2>
+            <p><strong>Fecha de creación:</strong> Siglos XV a.C. - I d.C.</p>
+            <p><strong>Número de versículos:</strong> Aproximadamente 31,102</p>
+            <p><strong>Antiguo Testamento:</strong> 39 libros, relata la historia de la creación, los patriarcas, la ley de Moisés y los profetas.</p>
+            <p><strong>Nuevo Testamento:</strong> 27 libros, narra la vida y enseñanzas de Jesús, la iglesia primitiva y las cartas apostólicas.</p>
+            <button class="verMas" id="conoce-mas">Conoce más en el mejor libro, presiona aquí</button>
+        </section>
+    </div>
+    
+
+</body>
+</html>

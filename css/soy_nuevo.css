@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: "Red Hat Mono", serif;
+    font-style: normal;    
+    width: 100%;
+    flex-wrap: wrap;
+    }
+        .banner {
+            width: 100%;
+            height: 480px;
+            overflow: hidden;
+            position: relative;
+        }
+        .images {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .images.active {
+            opacity: 1;
+        }
+        .images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .controls button {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 15px;
+            margin: 20px;
+        }
+       .controls button:hover{
+           background: rgba(0, 0, 0, 0.8);
+ 
+       }
+
+        .section-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 1400px;
+            gap: 30px;
+            margin: 50px;
+        }
+        .text-content {
+            flex: 1;
+        }
+        .text-content h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .text-content p {
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+        .video-container {
+            flex: 1;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .button {
+            display: inline-block;
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s ease-in-out;
+        }
+        .button:hover {
+            background: rgb(155, 155, 155);
+            color: black;
+        }
+        @media (max-width: 768px) {
+            .section-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+
+
+
+        .preguntas_frecuentes {
+            max-width: 1100px;
+            margin: 150px auto;
+            text-align: center;
+        }
+        .preguntas_frecuentes h1 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .underline {
+            width: 50px;
+            height: 2px;
+            background-color: teal;
+            margin: 5px auto 20px auto;
+        }
+        .accordion-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+            padding: 0 20px;
+        }
+        .accordion {
+            position: relative;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .accordion::before {
+            content: '\25B6';
+            font-size: 0.8em;
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
+        .accordion.active::before {
+            transform: rotate(90deg);
+        }
+        .accordion-content {
+            display: none;
+            padding-left: 20px;
+            font-weight: normal;
+            font-size: 0.9em;
+        }
+        .accordion.active + .accordion-content {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .accordion-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        .contenedor-moriah {
+            display: flex;
+            /* max-width: 900px; */
+            width: 100%;
+            background: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 100px;
+        }
+        
+        .imagen-moriah {
+            width: 50%;
+        }
+        
+        .imagen-moriah img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .formulario-moriah {
+            width: 50%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .grupo-inputs-moriah {
+            display: flex;
+            gap: 10px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .botonwhatsapp {
+            width: 100%;
+            padding: 10px;
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .botonwhatsapp:hover {
+            background: #1ebe5d;
+        }
+        
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .contenedor-moriah {
+                flex-direction: column;
+            }
+            .imagen-moriah {
+                width: 100%;
+                height: 250px;
+            }
+            .formulario-moriah {
+                width: 100%;
+            }
+        }
+
+        
+
+        .containerbiblia {
+            display: flex;
+            width: 100%;
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .versiculo, .conoce-biblia {
+            flex: 1;
+            padding: 20px;
+        }
+        .versiculo {
+            border-right: 2px solid #ddd;
+        }
+        .verMas {
+            background-color: #02208e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .verMas:hover {
+            background-color: #02808e;
+        }
+
+
+
+
+
+        /* Botón "Ir a Inicio" encima del banner */
+.index-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+.index-button:hover {
+    background: #0056b3;
+}
+
+/* Botón "Volver al Inicio" flotante */
+.floating-home-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px;
+    background: #28a79f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.floating-home-button:hover {
+    background: #02208e;
+}
