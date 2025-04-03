@@ -1,224 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="../js/about.js"></script>
     <title>About</title>
-</head>
-<body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1500, // Duración de la animación en milisegundos
-      once: false, // La animación solo ocurre una vez
-    });
-  </script>
-  
-  <header class="header" data-aos="fade-down">
-    <a href="../index.html">
-        <img src="../storage/262392962_111431158039475_4524837832433151331_n-Photoroom.png" alt="Logo Moriah">
-    </a>
-    
-    <div class="header-content">
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500, // Duración de la animación en milisegundos
+        once: false, // La animación solo ocurre una vez
+      });
+    </script>
+
+    <header class="header" data-aos="fade-down">
+      <a href="../views/home.html">
+        <img
+          src="../storage/262392962_111431158039475_4524837832433151331_n-Photoroom.png"
+          alt="Logo Moriah"
+        />
+      </a>
+
+      <div class="header-content">
         <h1>MORIAH</h1>
         <p>sacrificio de adoración</p>
-    </div>
+      </div>
 
-    <!-- Menú hamburguesa -->
-    <div class="hamburger" id="menu-btn">
-        <input type="checkbox" id="menu-toggle">
+      <!-- Menú hamburguesa -->
+      <div class="hamburger" id="menu-btn">
+        <input type="checkbox" id="menu-toggle" />
         <svg viewBox="0 0 32 32">
-            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-            <path class="line" d="M7 16 27 16"></path>
+          <path
+            class="line line-top-bottom"
+            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+          ></path>
+          <path class="line" d="M7 16 27 16"></path>
         </svg>
-    </div>
+      </div>
 
-
-    <!-- Menú de navegación -->
-    <nav class="nav_Moriah" id="navMoriah">
+      <!-- Menú de navegación -->
+      <nav class="nav_Moriah" id="navMoriah">
         <ul class="nav_list">
-            <li><a href="../views/visitanos.html">Visítanos</a></li>
-            <li><a href="../views/about.html">Acerca de nosotros</a></li>
-            <li><a href="../views/intersecion.html">Peticiones</a></li>
-            <li class="dropdown">
-                <a href="#">Ministerios</a>
-                <ul class="dropdown_menu">
-                    <li><a href="../views/jovenes.html">Jóvenes</a></li>
-                    <li><a href="../views/alabanza.html">Alabanza</a></li>
-                    <li><a href="../views/intersecion.html">Intercesión</a></li>
-                    <li><a href="../views/Diaconos.html">Diáconos</a></li>
-                    <li><a href="../views/infantil.html">Infantil</a></li>
-                </ul>
-            </li>
-            <li><a href="../views/proximospasos.html">Próximos pasos</a></li>
+          <li><a href="../views/visitanos.html">Visítanos</a></li>
+          <li><a href="../views/about.html">Acerca de nosotros</a></li>
+          <li><a href="../views/intersecion.html">Peticiones</a></li>
+          <li class="dropdown">
+            <a href="#">Ministerios</a>
+            <ul class="dropdown_menu">
+              <li><a href="../views/jovenes.html">Jóvenes</a></li>
+              <li><a href="../views/alabanza.html">Alabanza</a></li>
+              <li><a href="../views/intersecion.html">Intercesión</a></li>
+              <li><a href="../views/Diaconos.html">Diáconos</a></li>
+              <li><a href="../views/infantil.html">Infantil</a></li>
+            </ul>
+          </li>
+          <li><a href="../views/proximospasos.html">Próximos pasos</a></li>
         </ul>
-         <a href="../views/soy_nuevo.html">
-            <button class="new_button">¿Eres nuevo?</button>
-        </a>    </nav>
+        <a href="../views/soy_nuevo.html">
+          <button class="new_button">¿Eres nuevo?</button>
+        </a>
+      </nav>
 
-    <!-- Overlay para cerrar el menú -->
-    <div class="overlay" id="menu-overlay"></div>
-  </header>
+      <!-- Overlay para cerrar el menú -->
+      <div class="overlay" id="menu-overlay"></div>
+    </header>
 
+    <!-- javascript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const navMoriah = document.getElementById("navMoriah");
+        const overlay = document.getElementById("menu-overlay");
+        const menuBtn = document.getElementById("menu-btn");
 
-  <!-- javascript -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMoriah = document.getElementById('navMoriah');
-  const overlay = document.getElementById('menu-overlay');
-  const menuBtn = document.getElementById('menu-btn');
+        function toggleMenu() {
+          const isOpen = navMoriah.classList.contains("open");
 
-  function toggleMenu() {
-      const isOpen = navMoriah.classList.contains('open');
+          if (isOpen) {
+            navMoriah.classList.remove("open");
+            overlay.classList.remove("active");
+            menuToggle.checked = false; // Desmarcar el checkbox
+          } else {
+            navMoriah.classList.add("open");
+            overlay.classList.add("active");
+            menuToggle.checked = true; // Marcar el checkbox
+          }
+        }
 
-      if (isOpen) {
-          navMoriah.classList.remove('open');
-          overlay.classList.remove('active');
-          menuToggle.checked = false; // Desmarcar el checkbox
-      } else {
-          navMoriah.classList.add('open');
-          overlay.classList.add('active');
-          menuToggle.checked = true; // Marcar el checkbox
-      }
-  }
-
-  menuBtn.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', toggleMenu);
-});
-  </script>
+        menuBtn.addEventListener("click", toggleMenu);
+        overlay.addEventListener("click", toggleMenu);
+      });
+    </script>
 
     <main class="main_about" data-aos="fade-up">
       <section class="sectionOne" data-aos="fade-up">
         <div class="scroll-container">
-            <video autoplay loop muted playsinline>
-                <source src="../storage/[Apple-Event]-Summary-Slide-[remix] (1).mp4" type="video/mp4">
-            </video>
+          <video autoplay loop muted playsinline>
+            <source
+              src="../storage/[Apple-Event]-Summary-Slide-[remix] (1).mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
-    </section>
-        <section class="vision_section" data-aos="fade-left">
-            <div class="vision_text">
-                <h3>Nuestra visión</h3>
-                <h2>Deseamos ser una iglesia de Jesús.</h2>
-                <p>Queremos que nuestra iglesia tenga un encuentro con el Dios vivo, sea un lugar de discipulado, sirva a la comunidad local y al mundo creando impacto a través del nombre de Jesucristo.</p>
-                <a href="../views/soy_nuevo.html" class="visit_button">Planifique su visita</a>
-            </div>
-            <div class="vision_video">
-                <iframe src="https://www.youtube.com/embed/EXAMPLE" title="Vision Video" allowfullscreen></iframe>
-            </div>
-        </section>
+      </section>
+      <section class="vision_section" data-aos="fade-left">
+        <div class="vision_text">
+          <h3>Nuestra visión</h3>
+          <h2>Deseamos ser una iglesia de Jesús.</h2>
+          <p>
+            Queremos que nuestra iglesia tenga un encuentro con el Dios vivo,
+            sea un lugar de discipulado, sirva a la comunidad local y al mundo
+            creando impacto a través del nombre de Jesucristo.
+          </p>
+          <a href="../views/soy_nuevo.html" class="visit_button"
+            >Planifique su visita</a
+          >
+        </div>
+        <div class="vision_video">
+          <iframe
+            src="https://www.youtube.com/embed/EXAMPLE"
+            title="Vision Video"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
 
-        <section class="team-section" data-aos="zoom-right">
-            <h2>Nuestro liderazgo</h2>
-            <h1>Conozca al equipo</h1>
-            <div class="team-member">
-              <div class="image-container">
-                <img src="ruta-de-la-imagen.jpg" alt="Foto de Van Vandegriff">
-              </div>
-              <div class="member-info">
-                <h3>Raúl Merlo</h3>
-                <h4>PASTOR PRINCIPAL</h4>
-                <p>
-                    Raúl Merlo se mudó a Georgia desde Waco, Texas, para pastorear la Iglesia Cedarcrest en diciembre de 2017. 
-                  Se graduó de la Universidad de Baylor (BBA) y del Seminario Teológico George W. Truett (M.Div.), después de lo cual él y su esposa, Kelly, se convirtieron en plantadores de iglesias en Berlín, Alemania, durante 8 años.
-                </p>
-                <p>
-                  El pastor Van es un apasionado de Jesús, la iglesia local y las misiones globales. Cuando no está liderando un nuevo emprendimiento para construir la iglesia local, disfruta de cazar, viajar y pasar tiempo con sus tres hijos adolescentes y su esposa, Kelly.
-                </p>
-                <div class="social-links">
-                  <a href="#"><img src="../storage/mail_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="Email"></a>
-                  <a href="#"><img src="../storage/insta.png" alt="Instagram"></a>
-                </div>
-              </div>
+      <section class="team-section" data-aos="zoom-right">
+        <h2>Nuestro liderazgo</h2>
+        <h1>Conozca al equipo</h1>
+        <div class="team-member">
+          <div class="image-container">
+            <img src="ruta-de-la-imagen.jpg" alt="Foto de Van Vandegriff" />
+          </div>
+          <div class="member-info">
+            <h3>Raúl Merlo</h3>
+            <h4>PASTOR PRINCIPAL</h4>
+            <p>
+              Raúl Merlo se mudó a Georgia desde Waco, Texas, para pastorear la
+              Iglesia Cedarcrest en diciembre de 2017. Se graduó de la
+              Universidad de Baylor (BBA) y del Seminario Teológico George W.
+              Truett (M.Div.), después de lo cual él y su esposa, Kelly, se
+              convirtieron en plantadores de iglesias en Berlín, Alemania,
+              durante 8 años.
+            </p>
+            <p>
+              El pastor Van es un apasionado de Jesús, la iglesia local y las
+              misiones globales. Cuando no está liderando un nuevo
+              emprendimiento para construir la iglesia local, disfruta de cazar,
+              viajar y pasar tiempo con sus tres hijos adolescentes y su esposa,
+              Kelly.
+            </p>
+            <div class="social-links">
+              <a href="#"
+                ><img
+                  src="../storage/mail_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Email"
+              /></a>
+              <a href="#"><img src="../storage/insta.png" alt="Instagram" /></a>
             </div>
-          </section>
-          <section class="leadership-section">
-            
-            <div class="leader-profile">
-              <div class="leader-details">
-                <h3 class="leader-name">Mireya Serrano</h3>
-                <h4 class="leader-role">PASTORA PRINCIPAL</h4>
-                <p class="leader-description">
-                  Mireya Serrano lidera nuestra iglesia con dedicación y un corazón apasionado por guiar a las personas hacia Jesús. Con años de experiencia en el ministerio, ha impactado a muchas vidas a través de su amor y compromiso con la fe.
-                </p>
-                <p class="leader-description">
-                  La Pastora Mireya se destaca por su enfoque en la enseñanza bíblica, la construcción de comunidad y el liderazgo inspirador. En su tiempo libre, disfruta compartir momentos en familia, leer y explorar nuevas maneras de servir a la comunidad.
-                </p>
-                <div class="leader-social-links">
-                  <a href="#"><img src="../storage/mail_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="Email"></a>
-                  <a href="#"><img src="../storage/insta.png" alt="Instagram"></a>
-                </div>
-              </div>
+          </div>
+        </div>
+      </section>
+      <section class="leadership-section">
+        <div class="leader-profile">
+          <div class="leader-details">
+            <h3 class="leader-name">Mireya Serrano</h3>
+            <h4 class="leader-role">PASTORA PRINCIPAL</h4>
+            <p class="leader-description">
+              Mireya Serrano lidera nuestra iglesia con dedicación y un corazón
+              apasionado por guiar a las personas hacia Jesús. Con años de
+              experiencia en el ministerio, ha impactado a muchas vidas a través
+              de su amor y compromiso con la fe.
+            </p>
+            <p class="leader-description">
+              La Pastora Mireya se destaca por su enfoque en la enseñanza
+              bíblica, la construcción de comunidad y el liderazgo inspirador.
+              En su tiempo libre, disfruta compartir momentos en familia, leer y
+              explorar nuevas maneras de servir a la comunidad.
+            </p>
+            <div class="leader-social-links">
+              <a href="#"
+                ><img
+                  src="../storage/mail_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Email"
+              /></a>
+              <a href="#"><img src="../storage/insta.png" alt="Instagram" /></a>
             </div>
-            <div class="leader-image">
-                <img src="ruta-de-la-imagen.jpg" alt="Foto de Pastora Mireya Serrano">
-              </div>
-          </section>
-          <section class="ministeriosA">
-            <div class="contenido">
-              <h2>Intercesión</h2>
-              <p>
-                La junta de Intercesión supervisa las oraciones además de cubrirnos espiritualmente.
-              </p>
-              <p>
-                Para ponerse en contacto con nuestro grupo de Intercesión, puede enviarnos un
-                correo electrónico o no dude en comunicarse con uno de ellos entre los
-                servicios de un domingo.
-              </p>
-              <a href="../views/intersecion.html">
-                  <button class="btn-contactar">Contactar al grupo de Intercesión</button>
-              </a>
+          </div>
+        </div>
+        <div class="leader-image">
+          <img
+            src="ruta-de-la-imagen.jpg"
+            alt="Foto de Pastora Mireya Serrano"
+          />
+        </div>
+      </section>
+      <section class="ministeriosA">
+        <div class="contenido">
+          <h2>Intercesión</h2>
+          <p>
+            La junta de Intercesión supervisa las oraciones además de cubrirnos
+            espiritualmente.
+          </p>
+          <p>
+            Para ponerse en contacto con nuestro grupo de Intercesión, puede
+            enviarnos un correo electrónico o no dude en comunicarse con uno de
+            ellos entre los servicios de un domingo.
+          </p>
+          <a href="../views/intersecion.html">
+            <button class="btn-contactar">
+              Contactar al grupo de Intercesión
+            </button>
+          </a>
+        </div>
+      </section>
+      <section class="iglesia">
+        <div class="contenido-iglesia">
+          <div class="contenido-izquierda">
+            <h3 class="nombre-lider">Iglesia Cuadrangular Moriah</h3>
+            <p class="descripcion-lider">
+              La iglesia cristiana Cuadrangular Moriah es un lugar de sacrificio
+              de adoración de la contr
+            </p>
+            <p class="descripcion-lider">
+              La Pastora Mireya se destaca por su enfoque en la enseñanza
+              bíblica, la construcción de comunidad y el liderazgo inspirador.
+              En su tiempo libre, disfruta compartir momentos en familia, leer y
+              explorar nuevas maneras de servir a la comunidad.
+            </p>
+            <div class="enlaces-sociales-lider">
+              <a href="#"
+                ><img
+                  src="../storage/mail_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Email"
+              /></a>
+              <a href="#"><img src="../storage/insta.png" alt="Instagram" /></a>
             </div>
-            
-          </section>
-          <section class="iglesia">
-            <div class="contenido-iglesia">
-              <div class="contenido-izquierda">
-                <h3 class="nombre-lider">Iglesia Cuadrangular Moriah</h3>
-                <p class="descripcion-lider">
-                  La iglesia cristiana Cuadrangular Moriah es un lugar de sacrificio de adoración de la contr
-                </p>
-                <p class="descripcion-lider">
-                  La Pastora Mireya se destaca por su enfoque en la enseñanza bíblica, la construcción de comunidad y el liderazgo inspirador. En su tiempo libre, disfruta compartir momentos en familia, leer y explorar nuevas maneras de servir a la comunidad.
-                </p>
-                <div class="enlaces-sociales-lider">
-                  <a href="#"><img src="../storage/mail_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="Email"></a>
-                  <a href="#"><img src="../storage/insta.png" alt="Instagram"></a>
-                </div>
-              </div>
-              <div class="contenido-derecha">
-                <img src="ruta/a/la/imagen.jpg" alt="Imagen Iglesia">
-              </div>
-            </div>
-          </section>
+          </div>
+          <div class="contenido-derecha">
+            <img src="ruta/a/la/imagen.jpg" alt="Imagen Iglesia" />
+          </div>
+        </div>
+      </section>
 
-          <section class="ministerios">
-              <h2>Ministerios</h2>
-              <h1>Conozca nuestros ministerios</h1>
-              <div class="content_ministerios">
-                  <div class="one-div">
-                    <div class="text">Alabanza</div>
-                  </div>
-                  <div class="one-div">
-                    <div class="text">Intercesión</div>
-                  </div>
-                  <div class="one-div">
-                    <div class="text">Jóvenes</div>
-                  </div>
-                  <div class="one-div">
-                    <div class="text">Diáconos</div>
-                  </div><div class="one-div">
-                    <div class="text">Infantil</div>
-                  </div>
-              </div>          
-          </section>
-    </main>   
-</body>
+      <section class="ministerios">
+        <h2>Ministerios</h2>
+        <h1>Conozca nuestros ministerios</h1>
+        <div class="content_ministerios">
+          <div class="one-div">
+            <div class="text">Alabanza</div>
+          </div>
+          <div class="one-div">
+            <div class="text">Intercesión</div>
+          </div>
+          <div class="one-div">
+            <div class="text">Jóvenes</div>
+          </div>
+          <div class="one-div">
+            <div class="text">Diáconos</div>
+          </div>
+          <div class="one-div">
+            <div class="text">Infantil</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
