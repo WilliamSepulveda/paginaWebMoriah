@@ -7,7 +7,6 @@
 }
 
 body {
-  /* padding: 1px; */
   font-family: "Red Hat Mono", serif;
   font-style: normal;
   width: 100%;
@@ -16,6 +15,7 @@ body {
 }
 
 .header {
+  padding: 10px;
   display: flex;
   position: static;
   flex-direction: row;
@@ -23,9 +23,10 @@ body {
   justify-content: space-between;
   background-color: #000000;
   width: 100%;
-  padding: 18px;
   flex-wrap: wrap;
+
 }
+
 
 .header-content {
   display: flex;
@@ -38,49 +39,49 @@ body {
   width: 80px;
 }
 
-.header h1,
-.header p {
-  color: #ffffff;
-  margin: 0;
+.header h1, .header p {
+color: #ffffff;
+margin: 0;
 }
 
 .nav_Moriah {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+display: flex;
+align-items: center;
+gap: 50px;
 }
 
 .nav_list {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  list-style-type: none;
-  position: relative;
+display: flex;
+flex-direction: row;
+gap: 50px;
+list-style-type: none;
+position: relative;
 }
 
 .nav_list li {
-  position: relative;
-  animation: fadeInUp 1s ease-out;
-  transform-origin: 0.5s inline;
+position: relative;
+animation: fadeInUp 1s ease-out;
+transform-origin: 0.5s inline;
 }
 
 .nav_list li a {
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s ease;
-  font-size: 16px;
+text-decoration: none;
+color: #ffffff;
+transition: color 0.3s ease;
+font-size: 16px;
 }
 
 .nav_list li a:hover {
-  color: blueviolet;
+  color: rgb(4, 103, 240);
 }
 
 .nav_list li:hover::after {
-  background-color: blueviolet;
+  background-color: rgb(15, 195, 240);
 }
 
 .dropdown_menu {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 100%;
   left: 0;
@@ -103,20 +104,20 @@ body {
   color: #ffffff;
   text-decoration: none;
   display: block;
-  transition: color 0.3s;
+  transition: color 0.3s, font-size 0.2s;
   font-size: 14px;
-  transition: 0.2s;
 }
 
 .dropdown_menu li a:hover {
-  color: blueviolet;
+  color: rgb(4, 103, 240);
   font-size: 16px;
 }
 
 .dropdown:hover .dropdown_menu {
-  display: block;
-  transition-duration: 2s linear;
+  opacity: 1;
+  visibility: visible;
 }
+
 
 .new_button {
   background-color: rgb(105, 104, 104);
@@ -130,259 +131,108 @@ body {
 }
 
 .new_button:hover {
-  background-color: blueviolet;
+  background-color: rgb(8, 181, 224);
   color: black;
   transform: scale(1.05);
 }
 
-/* From Uiverse.io by talhabangyal */
+/* From Uiverse.io by talhabangyal */ 
 .hamburger {
-  display: none;
-  cursor: pointer;
-  margin-right: 25vw;
+display: none;
+cursor: pointer;
+margin-right: 15vw;
 }
 
 .hamburger input {
-  display: none;
+display: none;
 }
 
 .hamburger svg {
-  /* The size of the SVG defines the overall size */
-  height: 3em;
-  /* Define the transition for transforming the SVG */
-  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+/* The size of the SVG defines the overall size */
+height: 3em;
+/* Define the transition for transforming the SVG */
+transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line {
-  fill: none;
-  stroke: white;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
-  /* Define the transition for transforming the Stroke */
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+fill: none;
+stroke: white;
+stroke-linecap: round;
+stroke-linejoin: round;
+stroke-width: 3;
+/* Define the transition for transforming the Stroke */
+transition:
+  stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line-top-bottom {
-  stroke-dasharray: 12 63;
+stroke-dasharray: 12 63;
 }
 
 .hamburger input:checked + svg {
-  transform: rotate(-45deg);
+transform: rotate(-45deg);
 }
 
 .hamburger input:checked + svg .line-top-bottom {
-  stroke-dasharray: 20 300;
-  stroke-dashoffset: -32.42;
+stroke-dasharray: 20 300;
+stroke-dashoffset: -32.42;
 }
-
-/* Contenedor con efecto Parallax */
-.main_visitanos {
-  position: relative;
-  width: 100%;
-  height: auto; /* Pantalla completa */
-  background: url("https://storage2.snappages.site/RHKN2B/assets/images/6655824_2048x1365_2500.jpg")
-    no-repeat center center/cover;
-  background-attachment: fixed; /* Efecto Parallax */
-  display: flex;
+.nav_Moriah {
+  display: none;
   flex-direction: column;
-  justify-content: center;
-}
-.main_visitanos h1 {
-  padding: 50px;
-  color: white;
-  letter-spacing: 2px;
-  font-size: 2rem;
-}
-/* Contenedor de texto con efecto flotante */
-.texto {
-  width: 0%;
-  max-width: 1000px;
-  background: rgba(164, 34, 34, 0.6); /* Fondo oscuro semitransparente */
-  padding: 20px;
-  border-radius: 10px;
-  color: white;
-}
-
-h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-.countdown {
-  display: flex;
-  gap: 15px;
-  width: 80%;
-  margin-left: 5%;
-
-}
-
-.box {
-  position: relative;
-  width: 12%;
-  height: 150px;
-  background: #1a1423;
-  border-radius: 8px;
-  font-size: 40px;
-  color: #ff3860;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  perspective: 300px;
-  overflow: hidden;
-}
-.flip {
   position: absolute;
+  top: 100px;
+  left: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backface-visibility: hidden;
-  transform-origin: bottom;
-}
-.flip.animate {
-  animation: flipDown 0.6s ease-in-out;
-}
-@keyframes flipDown {
-  0% {
-    transform: rotateX(0deg);
-  }
-  100% {
-    transform: rotateX(-90deg);
-  }
-}
-
-.miercoles h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #ffffff;
+  background: rgba(0, 0, 0, 0.9);
   padding: 50px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
 }
-
-.miercoles p {
-  padding: 0 50px;
-  font-size: 2rem;
-  color: white;
-}
-
-.jueves h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #ffffff;
-  padding: 50px;
-}
-
-.jueves p {
-  padding: 0 50px;
-  font-size: 2rem;
-  color: white;
-}
-
-/* Animación para hacer un ligero movimiento */
-@keyframes moveText {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.texto {
-  animation: moveText 4s infinite ease-in-out;
-}
-
-.countdown-container {
+.nav_Moriah.open {
   display: flex;
-  justify-content: center;
+}
+
+.hamburger {
+  display: block;
+  transform: translatex(40px);
+}
+.nav_list {
+  flex-direction: column;
   gap: 20px;
-  font-size: 36px;
-  font-weight: bold;
 }
-h2 {
-  padding: 0 50px;
-  color: white;
+
+.nav_list li {
   text-align: center;
-  margin-bottom: 15px;
 }
-.countdown {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  min-width: 120px;
-  color: white;
+.dropdown_menu {
+  position: relative;
+  background-color: transparent;
+  box-shadow: none;
+  
 }
-.label {
-  font-size: 16px;
-  font-weight: normal;
-  margin-top: 10px;
+.dropdown_menu:before {
+  transition: 0.5s linear;
+}
+.dropdown:hover .dropdown_menu {
   display: block;
 }
-
-.video {
-  max-width: 80%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.newsletter {
-  max-width: 300px;
-}
-.newsletter input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border: none;
-}
-.newsletter button {
-  background: none;
-  border: 1px solid white;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  margin-top: 5px;
-  width: 100%;
-}
-.copyright {
-  text-align: center;
-  margin-top: 20px;
-}
-.nav-menu {
-  position: fixed;
-  top: 0;
-  left: -250px; /* Inicialmente oculto */
-  width: 250px;
-  height: 100%;
-  background: #333;
-  color: white;
-  transition: left 0.3s ease;
-}
-
-.nav-menu.open {
-  left: 0; /* Muestra el menú */
-}
-
 @media screen and (max-width: 768px) {
   .header {
-    padding: 10px;
+    padding:10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
     text-align: center;
     width: 100%;
   }
-
+  
   .header img {
-    max-height: 120px;
+    max-height: 120px; 
   }
-
+  
   .header-content {
     position: absolute;
     top: 0;
@@ -393,95 +243,326 @@ h2 {
     padding: 0px;
     text-align: center;
   }
-  .header-content h1,
-  p {
-    text-align: flex-start;
+  .header-content h1, p{
+    text-align:flex-start;
   }
 
   .nav_Moriah {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 50px;
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
-  }
-  .nav_Moriah.open {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-    transform: translatex(180px);
-  }
-  .nav_list {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav_list li {
-    text-align: center;
-  }
-  .dropdown_menu {
-    position: relative;
-    background-color: transparent;
-    box-shadow: none;
-  }
-  .dropdown_menu:before {
-    transition: 0.5s linear;
-  }
-  .dropdown:hover .dropdown_menu {
-    display: block;
-  }
-  .main_visitanos {
-    height: auto;
-    padding: 40px 20px;
-  }
-  .main_visitanos h1 {
-    color: white;
-    letter-spacing: 2px;
-  }
-
-  .Moriahh {
-    position: absolute;
-    width: 350px;
-    margin-left: -63px;
-    margin-top: -20px;
-    /* background-color:red; */
-  }
-  .Domingos h1,
-  .miercoles h1,
-  .jueves h1 {
-    font-size: 1.8rem;
-  }
-  .Domingos p,
-  .miercoles p,
-  .jueves p {
-    font-size: 1.2rem;
-  }
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 50px;
+      transition: all 0.3s ease-in-out;
+      z-index: 1000;
+    }
+    .nav_Moriah.open {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      transform: translatex(40px);
+    }
+    .nav_list {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .nav_list li {
+      text-align: center;
+    }
+    .dropdown_menu {
+      position: relative;
+      background-color: transparent;
+      box-shadow: none;
+      
+    }
+    .dropdown_menu:before {
+      transition: 0.5s linear;
+    }
+    .dropdown:hover .dropdown_menu {
+      display: block;
+    }
+    .main_visitanos {
+        height: auto;
+        padding: 40px 20px;
+    }
+    .Moriahh{
+      position:absolute;
+      width: 350px;
+      margin-left:-63px;
+      margin-top: -20px;
+      /* background-color:red; */
+    }
+    .Domingos h1, .miercoles h1, .jueves h1 {
+        font-size: 1.8rem;
+    }
+    .Domingos p, .miercoles p, .jueves p {
+        font-size: 1.2rem;
+    }
+    .footer-section {
+        text-align: center;
+        width: 100%;
+    }
 }
-@media screen and (max-width: 480px) {
-  .header img {
-    width: 50px;
-  }
-  .new_button {
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-  .texto {
-    font-size: 16px;
-  }
-  .countdown-container {
-    font-size: 18px;
-  }
-  .countdown {
-    min-width: 80px;
-  }
+/* Mostrar el menú cuando el checkbox está checked */
+#menu-toggle:checked ~ .nav_Moriah {
+  display: flex;
 }
+
+.containerdad{
+  padding: 40px;
+}
+
+.banner {
+  position: relative;
+  background-image: url('https://img.freepik.com/free-photo/portrait-creative-young-smart-man-with-dreads-steeple-fingers-near-chest-smirk-devious-have-p_1258-109448.jpg?t=st=1744676100~exp=1744679700~hmac=936c32819193a35d7327ff3ea8981d0f93699bbb2453fe64b1bbca0f4e0449f1&w=1380');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 3px;
+  left: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.bienvenida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contenido {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.conexion {
+  margin-top: 2rem;
+  padding: 12px 24px;
+  border-radius: 40px;
+  border: none;
+  background-color: #000000;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+.conexion:hover {
+  background-color: #660568;
+  color: #ffffff;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-group input,
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.1rem;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+button.send-wpp {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.fechas {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  margin: 50px;
+  padding: 40px;
+  color: white;
+}
+.contenedorfechas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  color: #fff;
+  flex-wrap: wrap;
+}
+.contenedorfechas.invertido {
+  flex-direction: row-reverse;
+}
+
+.contenedortexto {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.contenedorimagen {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.contenedorimagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+#countdown {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #897CB4;
+}
+#countdown-2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #897CB4;
+}
+button {
+  margin-top: 15px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #fff;
+  color: #000;
+}
+.servicios-container {
+  display: grid;
+  margin: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.servicio {
+  background-color: #fdf5f2;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.servicio:nth-child(even) {
+  background-color: #eee6e1;
+}
+
+.icono {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-section {
+  width: 100%;
+  height: 450px;
+  margin-top: 2rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilo opcional para hacerlo más elegante */
+.leaflet-container {
+  filter: grayscale(20%) brightness(1.1) contrast(1.1);
+  border-radius: 20px;
+}
+
+
+
+
 
 .footer {
   background-color: #1c1a2c;

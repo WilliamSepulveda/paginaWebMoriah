@@ -3,51 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moriah</title>
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-    <!-- Scripts -->
+    <!-- Scripts de librerías -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Google Maps (Cuidado con la API Key) -->
-    <!-- Usa variables de entorno o config.js para ocultar la clave -->
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"
-    ></script>
-
-    <!-- Script principal (debe ir al final para que los demás scripts ya estén cargados) -->
+    <!-- Tu script -->
     <script type="module" src="../js/main.js"></script>
-
-    <title>Moriah</title>
   </head>
 
   <body>
     <script>
-      AOS.init({
-        duration: 1000,
-        once: false,
-      });
+      AOS.init({ duration: 1000, once: false });
     </script>
 
     <header class="header" data-aos="fade-down">
       <a href="../index.html">
-        <img
-          src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png"
-          alt="Logo Moriah"
-        />
+        <img src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png" alt="Logo Moriah" />
       </a>
 
       <div class="header-content">
@@ -59,10 +38,7 @@
       <div class="hamburger" id="menu-btn">
         <input type="checkbox" id="menu-toggle" />
         <svg viewBox="0 0 32 32">
-          <path
-            class="line line-top-bottom"
-            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-          ></path>
+          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
           <path class="line" d="M7 16 27 16"></path>
         </svg>
       </div>
@@ -89,41 +65,22 @@
           <button class="new_button">¿Eres nuevo?</button>
         </a>
       </nav>
-
-      <!-- Overlay para cerrar el menú -->
       <div class="overlay" id="menu-overlay"></div>
     </header>
 
+    <!-- Sección principal -->
     <section class="moriah_section" data-aos="zoom-in">
-      <video
-        class="moriah_video"
-        src="../storage/video.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-      ></video>
+      <video class="moriah_video" src="../storage/video.mp4" autoplay muted loop playsinline></video>
       <div class="moriah_content">
-        <h1 class="moriah_title">
-          Dios está <br />
-          contigo,
-        </h1>
-        <h2 class="moriah_span">
-          y nosotros <br />
-          también.
-        </h2>
+        <h1 class="moriah_title">Dios está <br /> contigo,</h1>
+        <h2 class="moriah_span">y nosotros <br /> también.</h2>
       </div>
     </section>
 
     <main class="main">
       <div class="container_main" data-aos="fade-left">
         <div class="contact_me">
-          <h1>
-            ¡Únase a <br />
-            nosotros en <br />
-            la iglesia estos<br />
-            días!
-          </h1>
+          <h1>¡Únase a <br /> nosotros en <br /> la iglesia estos<br /> días!</h1>
           <div class="contact_me2">
             <h2>Horarios de servicios</h2>
             <h3>Martes 7:00 pm, Domingo 9:00 am</h3>
@@ -140,39 +97,30 @@
           <img src="../storage/moriah.png" class="Moriahh" />
           <h2>Un lugar de sacrificio de adoración</h2>
           <p>
-            Vivimos esto en nuestras cuatro palabras clave de la visión:
-            encuentro, discipulado, servicio e impacto. Queremos que nuestra
-            iglesia tenga un encuentro con el Dios vivo, sea un lugar de
-            discipulado, sirva a la comunidad local y al mundo creando impacto a
-            través del nombre de Jesucristo. Cedarcrest, ubicada en Acworth,
-            Georgia, está formada por un grupo diverso de personas y familias de
-            todos los ámbitos de la vida. Juntos, formamos una familia de la
-            iglesia que anhela ser más como Jesús. Caminamos juntos por la vida
-            a través de grupos pequeños y grandes reuniones los domingos y
-            eventos especiales.
+            Vivimos esto en nuestras cuatro palabras clave de la visión: encuentro, discipulado, servicio e impacto.
+            Queremos que nuestra iglesia tenga un encuentro con el Dios vivo, sea un lugar de discipulado, sirva a la
+            comunidad local y al mundo creando impacto a través del nombre de Jesucristo. Cedarcrest, ubicada en
+            Acworth, Georgia, está formada por un grupo diverso de personas y familias de todos los ámbitos de la vida.
+            Juntos, formamos una familia de la iglesia que anhela ser más como Jesús.
           </p>
-          <button class="btn" onclick="location.href='about.html'">
-            Sobre nosotros
-          </button>
+          <button class="btn" onclick="location.href='about.html'">Sobre nosotros</button>
         </div>
         <div class="about_me_img">
-          <img
-            src="https://img.freepik.com/foto-gratis/bodegon-crucifijo-libro_23-2149344464.jpg"
-            alt=""
-          />
+          <img src="https://img.freepik.com/foto-gratis/bodegon-crucifijo-libro_23-2149344464.jpg" alt="cruz" />
         </div>
       </div>
     </main>
 
-    <!-- seccion de footer -->
+    <!-- Footer -->
     <footer class="footer2" data-aos="fade-up">
       <h1>Visítanos</h1>
       <div class="content_footer">
         <div id="map" style="height: 500px; width: 100%"></div>
       </div>
+
       <ul class="wrapper">
         <li class="icon facebook">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://web.facebook.com/moriah.icc"><i class="fa-brands fa-facebook-f"></i></a>
         </li>
         <li class="icon twitter">
           <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -187,67 +135,12 @@
       <p>Todos los derechos reservados 2025</p>
     </footer>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-col logo-col">
-          <h2><img src="logo.png" alt="Logo" class="logo" /> Eduko</h2>
-          <p>
-            Mattis inelit neque quis donec eleifend amet. Amet sed et cursus eu
-            euismod.
-          </p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
 
-        <div class="footer-col">
-          <h3>Quick Links</h3>
-          <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Featured Courses</li>
-            <li>Teachers</li>
-            <li>Latest News</li>
-          </ul>
-        </div>
 
-        <div class="footer-col">
-          <h3>Useful Links</h3>
-          <ul>
-            <li>Contact Us</li>
-            <li>Courses</li>
-            <li>Lesson</li>
-            <li>Sign Up</li>
-            <li>Testimonials</li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h3>Contact Us</h3>
-          <p><i class="fas fa-envelope"></i> Eduko@Gmail.Com</p>
-          <p><i class="fas fa-phone"></i> (208) 555-0112</p>
-          <p><i class="fas fa-phone"></i> (704) 555-0127</p>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> 4517 Washington Ave. <br />
-            Manchter, Kentucky 495
-          </p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2023 <strong>Eduko.</strong> All rights reserved.</p>
-        <div class="footer-links">
-          <a href="#">Privacy & Policy</a>
-          <a href="#">Terms</a>
-          <a href="../views/about.html">About us</a>
-          <a href="#">FAQ</a>
-        </div>
-      </div>
-
-      <button id="toTopBtn"><i class="fas fa-arrow-up"></i></button>
-    </footer>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"
+    ></script>
   </body>
 </html>

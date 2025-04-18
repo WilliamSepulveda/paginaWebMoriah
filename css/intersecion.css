@@ -490,8 +490,8 @@ button:hover {
 
   .header img {
     max-height: 120px;
-    margin-left: -300px;
-    position: relative;
+    margin-left: -450px;
+    position: static;
   }
 
   .header-content {
@@ -688,5 +688,33 @@ button:hover {
   }
   .container {
     padding: 20px;
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .header, .container, .education-section, .text-content, .image-content {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .nav_list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav_list li {
+    margin: 0 0 20px;
+  }
+
+  .image-content img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .form-container {
+    width: 100%;
   }
 }

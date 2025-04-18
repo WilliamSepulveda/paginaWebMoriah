@@ -1,11 +1,13 @@
-function initMap() {
+
+  function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: 7.172495991830042, lng:-73.13366387789854  },
+      center: { lat: 7.172495991830042, lng: -73.13366387789854 },
       zoom: 20,
     });
   }
-  
-  window.initMap = initMap; // Hacer accesible globalmente
+
+  window.initMap = initMap;
+
   
 
 

@@ -9,128 +9,287 @@
   </head>
   <body>
     <header class="header" data-aos="fade-down">
-      <a href="../views/home.html">
-        <img
-          src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png"
-          alt="Logo Moriah"
-        />
+      <a href="../index.html">
+        <img src="https://seeklogo.com/images/I/iglesia-cristiana-cuadrangular-logo-75048769EF-seeklogo.com.png" alt="Logo Moriah" />
       </a>
-
+    
       <div class="header-content">
         <h1>MORIAH</h1>
         <p>sacrificio de adoración</p>
       </div>
-
+    
       <!-- Menú hamburguesa -->
-      <div class="hamburger" id="menu-btn">
-        <input type="checkbox" id="menu-toggle" />
+      <input type="checkbox" id="menu-toggle" hidden />
+      <label for="menu-toggle" class="hamburger">
         <svg viewBox="0 0 32 32">
-          <path
-            class="line line-top-bottom"
-            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-          ></path>
+          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
           <path class="line" d="M7 16 27 16"></path>
         </svg>
-      </div>
-
+      </label>
+    
       <!-- Menú de navegación -->
-      <nav class="nav_Moriah" id="navMoriah">
-       <ul class="nav_list">
-            <li><a href="../views/visitanos.html">Visítanos</a></li>
-            <li><a href="../views/about.html">Acerca de nosotros</a></li>
-            <li><a href="../views/intersecion.html">Peticiones</a></li>
-            <li class="dropdown">
-                <a href="#">Ministerios</a>
-                <ul class="dropdown_menu">
-                    <li><a href="../views/jovenes.html">Jóvenes</a></li>
-                    <li><a href="../views/alabanza.html">Alabanza</a></li>
-                    <li><a href="../views/intersecion.html">Intercesión</a></li>
-                    <li><a href="../views/Diaconos.html">Diáconos</a></li>
-                    <li><a href="../views/infantil.html">Infantil</a></li>
-                </ul>
-            </li>
-            <li><a href="../views/proximospasos.html">Próximos pasos</a></li>
+      <nav class="nav_Moriah">
+        <ul class="nav_list">
+          <li><a href="../views/visitanos.html">Visítanos</a></li>
+          <li><a href="../views/about.html">Acerca de nosotros</a></li>
+          <li><a href="../views/intersecion.html">Peticiones</a></li>
+          <li class="dropdown">
+            <a href="#">Ministerios</a>
+            <ul class="dropdown_menu">
+              <li><a href="../views/jovenes.html">Jóvenes</a></li>
+              <li><a href="../views/alabanza.html">Alabanza</a></li>
+              <li><a href="../views/intersecion.html">Intercesión</a></li>
+              <li><a href="../views/Diaconos.html">Diáconos</a></li>
+              <li><a href="../views/infantil.html">Infantil</a></li>
+            </ul>
+          </li>
+          <li><a href="../views/proximospasos.html">Próximos pasos</a></li>
         </ul>
-         <a href="../views/soy_nuevo.html">
-            <button class="new_button">¿Eres nuevo?</button>
-        </a>      </nav>
-
-      <!-- Overlay para cerrar el menú -->
-      <div class="overlay" id="menu-overlay"></div>
+        <a href="../views/soy_nuevo.html">
+          <button class="new_button">¿Eres nuevo?</button>
+        </a>
+      </nav>
     </header>
-
-    <main class="main_visitanos">
-      <h1>Los esperamos en nuestros servicios del dia domingo a las 9:00AM </h1>
-      <div class="countdown">
-          <div class="box" id="daysBox"><div class="flip new" id="days">00</div></div>
-          <div class="box" id="hoursBox"><div class="flip new" id="hours">00</div></div>
-          <div class="box" id="minutesBox"><div class="flip new" id="minutes">00</div></div>
-          <div class="box" id="secondsBox"><div class="flip new" id="seconds">00 </div></div>
+    
+    <div class="containerdad">
+      <div class="banner">
+        <div class="overlay">
+          <h1>¿Eres nuevo? Empieza aquí</h1>
+        </div>
       </div>
+    </div>
 
-      <section class="miercoles">
-        <h1>Martes en la noche</h1>
-        <p>
-          Los servicios de los miércoles comienzan con un momento de oración y
-          adoración a las 7:00 p. m.
-        </p>
-        <p class="parrafo2M">
-          Luego el momento de la prédica e himnos para recordar las épocas de
-          los cánticos de los apóstoles
-        </p>
-        <h1>Cuenta regresiva</h1>
-        <h2>Próximo martes 7:00 PM:</h2>
-        <div class="countdown-container" id="countdownWednesday"></div>
-      </section>
+    <section class="bienvenida">
+      <h1 class="titulo">Únete a Nosotros este Domingo</h1>
+      <div class="contenido">
+        <p>Aquí siempre hay un lugar para ti. Sin importar tu edad, religión o etapa de la vida, tenemos una comunidad acogedora que quiere conocerte.</p>
+        <span>
+          Los servicios dominicales duran entre 60 y 70 minutos. ¡Ven como quieras, tu disposición es lo más importante! Hay servicios tanto para niños como para adultos. Si deseas completar una tarjeta de contacto y que alguien se ponga en contacto contigo, completa el formulario a continuación.
+        </span>
+        <button class="conexion">Tarjeta de Conexión</button>
+      </div>
+    </section>
+    <!-- MODAL -->
+    <div id="modalConexion" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Tarjeta de Conexión</h2>
+        <form id="conexionForm">
+          <div class="input-group">
+            <input type="text" placeholder="Nombre" id="nombre" required />
+            <input type="text" placeholder="Apellido" id="apellido" required />
+          </div>
+          <input type="tel" placeholder="Teléfono" id="telefono" required />
+          <input type="email" placeholder="Correo electrónico" id="correo" required />
+          <div class="checkbox-group">
+            <label><input type="checkbox" value="Soy nuevo" /> Soy nuevo</label>
+            <label><input type="checkbox" value="Quiero visitarlos" /> Quiero visitarlos</label>
+            <label><input type="checkbox" value="Quiero oración" /> Quiero oración</label>
+          </div>
+          <textarea placeholder="Mensaje adicional" id="mensaje"></textarea>
+          <button type="submit" class="send-wpp">Enviar por WhatsApp</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      const btnAbrir = document.querySelector(".conexion");
+      const modal = document.getElementById("modalConexion");
+      const close = document.querySelector(".close");
 
-      <section class="jueves">
-        <h1>Jueves en la noche</h1>
-        <p>
-          Los jueves tenemos "Taller del Alfarero", un espacio en donde nuestra
-          iglesia abre sus puertas para un momento de oración y peticiones a
-          Dios.
-        </p>
-      </section>
-    </main>
+      btnAbrir.addEventListener("click", () => {
+        modal.style.display = "flex";
+      });
+
+      close.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) modal.style.display = "none";
+      });
+
+      document.getElementById("conexionForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nombre = document.getElementById("nombre").value;
+        const apellido = document.getElementById("apellido").value;
+        const telefono = document.getElementById("telefono").value;
+        const correo = document.getElementById("correo").value;
+        const mensaje = document.getElementById("mensaje").value;
+
+        const checks = Array.from(document.querySelectorAll(".checkbox-group input:checked"))
+          .map((el) => el.value)
+          .join(", ");
+
+        const texto = `¡Hola! Mi nombre es ${nombre} ${apellido}%0A📱 Tel: ${telefono}%0A✉️ Email: ${correo}%0A📝 Opciones: ${checks}%0A💬 Mensaje: ${mensaje}`;
+
+        const url = `https://wa.me/573134024782?text=${encodeURIComponent(texto)}`;
+        window.open(url, "_blank");
+      });
+    </script>
+
+    <!-- seccion de fechas -->
+
+    <section class="fechas">
+      <!-- Evento 1 (Texto izquierda - Imagen derecha) -->
+      <div class="contenedorfechas normal">
+        <div class="contenedortexto">
+          <h1>Encuéntranos en Moriah</h1>
+          <p>Los domingos son nuestro servicio principal a las 9:00 a.m. ¡Te esperamos con alegría y gozo por ese gran paso!<br><br></p>
+          <div class="conteoregresivo" id="countdown"></div>
+          <p>Agéndate y saca tu espacio para venir. Si tienes alguna duda, contáctanos.</p>
+            </div>
+  
+        <div class="contenedorimagen">
+          <img src="https://scontent.fpei1-1.fna.fbcdn.net/v/t39.30808-6/486966711_659807479868504_492909704719679843_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeENJ11S18cYckaeh9et_MwWvXtdTyvImw69e11PK8ibDox1mRw2O1qdj86IV5Qvgowk25ZWK9vEQKN0AQQxFIui&_nc_ohc=SaeVS5kGLdsQ7kNvwH85j_K&_nc_oc=AdlwMvS1c1Ciwfnw_MaA_mMlh6jjkg6W11lNedROl_pZzwV663pih0FRFOrS5zfozyppTfRuxsx3r7eOI1uwoxl4&_nc_zt=23&_nc_ht=scontent.fpei1-1.fna&_nc_gid=FZhp1E0f2cUD41MRC7YVtA&oh=00_AfHVYDes1Wy24sJXrZsERgHdmW22Wxg9cu1VI5Y2t_lGPA&oe=680388DF" alt="Evento 1">
+        </div>
+      </div>
+    
+      <!-- Evento 2 (Imagen izquierda - Texto derecha) -->
+      <div class="contenedorfechas invertido">
+        <div class="contenedortexto">
+          <h1>servicios de miércoles</h1>
+          <p>Estamos preparando algo especial. ¡No te lo pierdas!</p>
+          <div class="conteoregresivo" id="countdown-2"></div>
+          <script>
+            function getNextWednesdayAt7PM() {
+              const now = new Date();
+              const currentDay = now.getDay(); // 0 = domingo, 3 = miércoles
+              const distanceToWednesday = (3 - currentDay + 7) % 7;
+              const nextWednesday = new Date(now);
+              nextWednesday.setDate(now.getDate() + distanceToWednesday);
+              nextWednesday.setHours(19, 0, 0, 0); // 19:00 = 7:00 p.m.
+              // Si ya pasaron las 7 p.m. del miércoles, va al siguiente miércoles
+              if (distanceToWednesday === 0 && now > nextWednesday) {
+                nextWednesday.setDate(nextWednesday.getDate() + 7);
+              }
+              return nextWednesday;
+            }
+          
+            function startCountdowns() {
+              const countdowns = document.querySelectorAll('[id^="countdown-2"]');
+              countdowns.forEach((el) => {
+                const update = () => {
+                  const now = new Date();
+                  const target = getNextWednesdayAt7PM();
+                  const diff = target - now;
+          
+                  if (diff <= 0) {
+                    el.textContent = "¡Es hora del servicio!";
+                    return;
+                  }
+          
+                  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                  const minutes = Math.floor((diff / 1000 / 60) % 60);
+                  const seconds = Math.floor((diff / 1000) % 60);
+                  el.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                };
+          
+                update();
+                setInterval(update, 1000);
+              });
+            }
+          
+            document.addEventListener("DOMContentLoaded", startCountdowns);
+          </script>
+          
+          <p>Agéndate y trae a tus amigos. ¡Será inolvidable!</p>
+        </div>
+ 
+        
+        <div class="contenedorimagen">
+          <img src="https://scontent.fpei3-1.fna.fbcdn.net/v/t39.30808-6/471759272_596828446166408_4031027147115353447_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEwM_odW66b6GtCWgGfrgsn3waTdP-B_yTfBpN0_4H_JIepGeLXs0OSwYRVhWgbPd3eM2oB-T2uhLI7p_vd1Kys&_nc_ohc=t3ON2O_FmLoQ7kNvwEeN-e3&_nc_oc=Adnm8J4MU9H9mesW9PqDVIOt7sTRajQCvrLefGTewcCghS-bDJ9nvRhpC75JP4D7fSRIg-tgJrO7n38xTFWVIL8u&_nc_zt=23&_nc_ht=scontent.fpei3-1.fna&_nc_gid=vO1VwD6gADxLgLm73MkS2A&oh=00_AfExWpo4kg_yg8YLW5OTkjU8dJLATBG2oizjU3-ONo5kzQ&oe=680379EB" alt="Evento 2">
+        </div>
+      </div>
+    
+    </section>
+    <section class="servicios-container">
+      <div class="servicio">
+        <div class="icono">🕒</div>
+        <h3>En persona</h3>
+        <p>Sábado</p>
+        <p>Discipulado 4 p.m.<br>Infantil 5 p.m.<br>Jóvenes 6 p.m.</p>
+      </div>
+      
+      <div class="servicio">
+        <div class="icono">🕒</div>
+        <h3>Culto Principal</h3>
+        <p>Domingo</p>
+        <p>9:00 a.m.</p>
+        <p id="countdown-domingo"></p>
+      </div>
+    
+      <div class="servicio">
+        <div class="icono">🕒</div>
+        <h3>En línea</h3>
+        <p>Domingo</p>
+        <p>Próximamente</p>
+      </div>
+    
+      <div class="servicio">
+        <div class="icono">🕒</div>
+        <h3>Entre semana</h3>
+        <p>Miércoles</p>
+        <p>7:00 p.m.</p>
+        <p id="countdown-2-miercoles"></p>
+      </div>
+    
+      <div class="servicio">
+        <div class="icono">🕒</div>
+        <h3>Taller del Alfarero</h3>
+        <p>Jueves</p>
+        <p>7:00 p.m.</p>
+      </div>
+    </section>
+    <section class="map-section">
+      <div id="map"></div>
+    </section>
+    <!-- Leaflet CSS y JS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const map = L.map("map").setView([7.172495991830042, -73.13366387789854], 50); // Medellín coords (ejemplo)
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '© OpenStreetMap contributors',
+    }).addTo(map);
+
+    // Ícono personalizado (opcional)
+    const customIcon = L.icon({
+      iconUrl: "https://cdn-icons-png.flaticon.com/512/684/684908.png", // puedes cambiarlo
+      iconSize: [40, 40],
+      iconAnchor: [20, 40],
+      popupAnchor: [0, -30],
+    });
+
+    L.marker([6.2442, -75.5812], { icon: customIcon })
+      .addTo(map)
+      .bindPopup("¡Estamos aquí!<br>Haz clic para abrir en Google Maps");
+  });
+</script>
 
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-col logo-col">
-          <h2><img src="logo.png" alt="Logo" class="logo" /> Eduko</h2>
-          <p>Mattis inelit neque quis donec eleifend amet. Amet sed et cursus eu euismod.</p>
+          <h2><img src="logo.png" alt="Logo" class="logo" /> MORIAH</h2>
+          <p>iglesia cristiana cuadrangular MORIAH</p>
           <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="f ab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
     
         <div class="footer-col">
-          <h3>Quick Links</h3>
-          <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Featured Courses</li>
-            <li>Teachers</li>
-            <li>Latest News</li>
-          </ul>
-        </div>
-    
-        <div class="footer-col">
-          <h3>Useful Links</h3>
-          <ul>
-            <li>Contact Us</li>
-            <li>Courses</li>
-            <li>Lesson</li>
-            <li>Sign Up</li>
-            <li>Testimonials</li>
-          </ul>
-        </div>
-    
-        <div class="footer-col">
           <h3>Contact Us</h3>
-          <p><i class="fas fa-envelope"></i> Eduko@Gmail.Com</p>
+          <p><i class="fas fa-envelope"></i> moriah@Gmail.Com</p>
           <p><i class="fas fa-phone"></i> (208) 555-0112</p>
           <p><i class="fas fa-phone"></i> (704) 555-0127</p>
           <p><i class="fas fa-map-marker-alt"></i> 4517 Washington Ave. <br> Manchter, Kentucky 495</p>
@@ -138,7 +297,7 @@
       </div>
     
       <div class="footer-bottom">
-        <p>© 2023 <strong>Eduko.</strong> All rights reserved.</p>
+        <p>© 2025 <strong>MORIAH.</strong> All rights reserved.</p>
         <div class="footer-links">
           <a href="#">Privacy & Policy</a>
           <a href="#">Terms</a>
@@ -146,7 +305,6 @@
           <a href="#">FAQ</a>
         </div>
       </div>
-    
       <button id="toTopBtn"><i class="fas fa-arrow-up"></i></button>
     </footer>
   </body>

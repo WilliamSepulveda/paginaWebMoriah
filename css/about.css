@@ -26,8 +26,6 @@ flex-wrap: wrap;
   flex-wrap: wrap;
 
 }
-
-
 .header-content {
   display: flex;
   flex-direction: column;
@@ -45,10 +43,20 @@ margin: 0;
 }
 
 .nav_Moriah {
-display: flex;
-align-items: center;
-gap: 50px;
+  position: relative;  /* Asegura que el z-index funcione */
+  z-index: 9999;  /* El número más alto para asegurarse de que esté en la parte superior */
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 50px;
+  transition: all 0.3s ease-in-out;
 }
+
+
 
 .nav_list {
 display: flex;
@@ -193,27 +201,31 @@ stroke-dashoffset: -32.42;
       justify-content: center;
       overflow: hidden;
       position: relative;
-      z-index: -10;
       animation: fadeIn 1.5s ease-in-out;
     } 
 
     .moriah_video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-        opacity: 05;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; /* En lugar de -1000 */
+      opacity: 0.5;
     }
-
+    
     .moriah_content {
-        position: absolute;
-        z-index: 2;
-        text-align: center;
-        color: white;
+      position: absolute;  /* Asegúrate de que sea absolute o relative */
+      top: 50%;  /* Ajusta la posición */
+      left: 50%;  /* Ajusta la posición */
+      transform: translate(-50%, -50%);  /* Centra el contenido */
+      z-index: 1;  /* Este debe ser más alto que el video */
+      color: white;
+      text-align: center;
     }
+    
+    
     .moriah_title {
         font-size: 4rem;
         margin-bottom: 10px;
@@ -763,6 +775,7 @@ stroke-dashoffset: -32.42;
     
   @media (max-width: 768px) {
     .header {
+      position: relative;
       padding:10px;
       display: flex;
       flex-direction: row;
@@ -770,6 +783,7 @@ stroke-dashoffset: -32.42;
       justify-content: space-between; 
       text-align: center;
       width: 100%;
+      z-index: 9999;
     }
     
     .header img {
@@ -789,19 +803,21 @@ stroke-dashoffset: -32.42;
     .header-content h1, p{
       text-align:flex-start;
     }
-  
     .nav_Moriah {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 50px;
-        transition: all 0.3s ease-in-out;
-        z-index: 1000;
-      }
+      position: relative;  /* Asegura que el z-index funcione */
+      z-index: 9999;  /* El número más alto para asegurarse de que esté en la parte superior */
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 50px;
+      transition: all 0.3s ease-in-out;
+    }
+    
+      
       .nav_Moriah.open {
         display: flex;
       }
